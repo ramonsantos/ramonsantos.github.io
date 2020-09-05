@@ -21,10 +21,10 @@
 title: Ramon Santos
 email: ramonsantos.pe@gmail.com
 description: Blog sobre desenvolvimento
+tagline: Blog sobre desenvolvimento
+lang: pt_BR
 baseurl: "/"
 url: "https://ramonsantos.github.io"
-twitter_username: ramonsantos_dev
-github_username:  ramonsantos
 
 # Build settings
 theme: shine-on-you-crazy-diamond-theme
@@ -32,6 +32,7 @@ theme: shine-on-you-crazy-diamond-theme
 
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -67,3 +68,21 @@ disqus:
   shortname: ramon-santos
 
 google_analytics: UA-82053881-1
+
+twitter:
+  card: summary
+  username: ramonsantos_dev
+  picture: "/ramon-santos.png"
+
+facebook:
+  app_id: 122740845026539
+  admins: CjHweHcsUQm
+
+author:
+  twitter: ramonsantos_dev
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /ramon-santos.png
