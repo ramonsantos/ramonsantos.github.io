@@ -3,3 +3,9 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+
+# temp
+_includes
+_layouts
+_sass
+assets
