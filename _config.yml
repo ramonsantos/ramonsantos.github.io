@@ -33,6 +33,7 @@ theme: shine-on-you-crazy-diamond-theme
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-archives
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -86,3 +87,13 @@ defaults:
       path: ""
     values:
       image: /ramon-santos.png
+
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: archive
+  slug_mode: "latin"
+  permalinks:
+    tag: '/tags/:name/'
+    category: '/categories/:name/'
