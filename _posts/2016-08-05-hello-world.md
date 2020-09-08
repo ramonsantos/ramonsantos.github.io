@@ -5,7 +5,6 @@ date: 2016-08-05 17:23:42 -0300
 categories: "Off"
 tags:
   - "Off"
-permalink: "blog/hello-world/"
 ---
 
 Olá, pessoal!

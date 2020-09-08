@@ -25,6 +25,7 @@ tagline: Blog sobre desenvolvimento
 lang: pt_BR
 baseurl: "/"
 url: "https://ramonsantos.github.io"
+permalink: "blog/:title:output_ext"
 
 # Build settings
 theme: shine-on-you-crazy-diamond-theme
@@ -34,6 +35,8 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
+  - jekyll-target-blank
+  - jekyll-paginate-v2
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -97,3 +100,16 @@ jekyll-archives:
   permalinks:
     tag: '/tags/:name/'
     category: '/categories/:name/'
+
+pagination:
+  enabled: true
+  debug: false
+  per_page: 3
+  permalink: '/page/:num/'
+  title: ':title - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 3
+    after: 3

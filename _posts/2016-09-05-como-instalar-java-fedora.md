@@ -10,7 +10,6 @@ tags:
   - Fedora
   - Java
 description:
-permalink: "blog/como-instalar-java-fedora/"
 ---
 
 <div style="text-align: center; display:none">

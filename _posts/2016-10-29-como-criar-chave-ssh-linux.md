@@ -8,7 +8,6 @@ tags:
   - Github
   - Deploy
 description:
-permalink: "blog/como-criar-chave-ssh-linux/"
 ---
 
 Olá, pessoal!

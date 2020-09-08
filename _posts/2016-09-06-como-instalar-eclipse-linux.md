@@ -8,8 +8,6 @@ tags:
   - Eclipse
   - IDE
 description:
-permalink: "blog/como-instalar-eclipse-linux/"
-
 ---
 
 <div style="text-align: center; display:none">

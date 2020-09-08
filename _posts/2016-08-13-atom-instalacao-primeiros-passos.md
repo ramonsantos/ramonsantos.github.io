@@ -8,7 +8,6 @@ tags:
   - Desenvolvimento Web
   - IDE
 description: Instalação e introdução ao editor Atom.
-permalink: "blog/atom-instalacao-primeiros-passos/"
 ---
 
 <div style="text-align: center; display:none">
