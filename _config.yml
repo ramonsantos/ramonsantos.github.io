@@ -23,13 +23,12 @@ email: ramonsantos.pe@gmail.com
 description: Blog sobre desenvolvimento
 tagline: Blog sobre desenvolvimento
 lang: pt_BR
-baseurl: "/"
-url: "https://ramonsantos.github.io"
+baseurl: ""
+url: ""
 permalink: "blog/:title:output_ext"
 
 # Build settings
 theme: shine-on-you-crazy-diamond-theme
-# remote_theme: ramonsantos/shine-on-you-crazy-diamond-theme
 
 plugins:
   - jekyll-feed
