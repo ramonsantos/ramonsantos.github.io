@@ -24,8 +24,8 @@ description: Blog sobre desenvolvimento
 tagline: Blog sobre desenvolvimento
 lang: pt_BR
 baseurl: ""
-url: ""
-permalink: "blog/:title:output_ext"
+url: "ramonsantos.github.io"
+permalink: "/blog/:title"
 
 # Build settings
 theme: shine-on-you-crazy-diamond-theme
@@ -75,7 +75,6 @@ google_analytics: UA-82053881-1
 twitter:
   card: summary
   username: ramonsantos_dev
-  picture: "/ramon-santos.png"
 
 facebook:
   app_id: 122740845026539
@@ -83,12 +82,13 @@ facebook:
 
 author:
   twitter: ramonsantos_dev
+  picture: "/ramon-santos.png"
 
 defaults:
   - scope:
       path: ""
     values:
-      image: /ramon-santos.png
+      image: "/ramon-santos.png"
 
 jekyll-archives:
   enabled:
@@ -105,10 +105,14 @@ pagination:
   debug: false
   per_page: 3
   permalink: '/page/:num/'
-  title: ':title - page :num'
+  title: ':title'
   limit: 0
   sort_field: 'date'
   sort_reverse: true
   trail:
     before: 3
     after: 3
+
+target-blank:
+   noopener: false
+   noreferrer: false

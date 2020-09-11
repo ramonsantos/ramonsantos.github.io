@@ -10,6 +10,8 @@ tags:
   - Fedora
   - Java
 description:
+image:
+  path: "/images/como-instalar-java-fedora/java.png"
 ---
 
 <div style="text-align: center; display:none">

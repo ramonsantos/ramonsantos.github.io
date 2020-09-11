@@ -7,6 +7,8 @@ tags:
   - Ferramentas Acadêmicas
 categories: Ferramentas
 description: Instalação do Gnuplot no fedora.
+image:
+  path: "/images/como-instalar-gnuplot-fedora/gnuplot-sin-x.png"
 ---
 
 Olá, pessoal!

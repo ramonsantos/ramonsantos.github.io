@@ -8,6 +8,8 @@ tags:
   - Eclipse
   - IDE
 description:
+image:
+  path: "/images/como-instalar-eclipse-linux/eclipse.png"
 ---
 
 <div style="text-align: center; display:none">

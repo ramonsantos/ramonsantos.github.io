@@ -8,6 +8,8 @@ tags:
   - Desenvolvimento Web
   - IDE
 description: Instalação e introdução ao editor Atom.
+image:
+  path: "/images/atom-instalacao-primeiros-passos/atom-icon.png"
 ---
 
 <div style="text-align: center; display:none">

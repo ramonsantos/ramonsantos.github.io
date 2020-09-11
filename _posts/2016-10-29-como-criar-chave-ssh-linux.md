@@ -3,6 +3,7 @@ layout: post
 title: Como criar chave SSH no Linux
 date: 2016-10-29 20:35:49 -0300
 categories: 'Linux'
+permalink: '/blog/como-criar-chave-ssh-linux/'
 tags:
   - Git
   - Github
