@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt_BR"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="ramonsantos.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="ramonsantos.github.io/" rel="alternate" type="text/html" hreflang="pt_BR" /><updated>2020-09-11T23:56:34+00:00</updated><id>ramonsantos.github.io/feed.xml</id><title type="html">Ramon Santos</title><subtitle>Blog sobre desenvolvimento</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;ramonsantos_dev&quot;, &quot;picture&quot;=&gt;&quot;/ramon-santos.png&quot;}</name></author><entry><title type="html">Como criar chave SSH no Linux</title><link href="ramonsantos.github.io/blog/como-criar-chave-ssh-linux/" rel="alternate" type="text/html" title="Como criar chave SSH no Linux" /><published>2016-10-29T23:35:49+00:00</published><updated>2016-10-29T23:35:49+00:00</updated><id>ramonsantos.github.io/blog/como-criar-chave-ssh-linux</id><content type="html" xml:base="ramonsantos.github.io/blog/como-criar-chave-ssh-linux/">&lt;p&gt;Olá, pessoal!&lt;/p&gt;
+
+&lt;p&gt;Hoje eu vou mostrar como gerar uma chave SSH (SSH key).&lt;/p&gt;
+
+&lt;p&gt;A primeira coisa a fazer é verificar se já existe uma chave SSH no sistema. Em geral, essas chaves ficam do diretório oculto “/home/USER/.ssh”, então execute o comando abaixo:&lt;/p&gt;
+
+&lt;pre class=&quot;terminal&quot;&gt;
+  $ ls ~/.ssh
+&lt;/pre&gt;
+
+&lt;p&gt;Dado que o esse diretório está vazio, podemos gerar a chave com o seguinte comando:&lt;/p&gt;
+
+&lt;pre class=&quot;terminal&quot;&gt;
+  $ ssh-keygen -t rsa -b 4096 -C &quot;seu.email@dominio.com&quot;
+&lt;/pre&gt;
+
+&lt;p&gt;Quanto a mensagem abaixo for exibida no terminal, pressione a tecla “Enter” para deixar a chave no diretório padrão.&lt;/p&gt;
+
+&lt;pre class=&quot;terminal&quot;&gt;
+    Enter a file in which to save the key (/Users/you/.ssh/id_rsa):
+&lt;/pre&gt;
+
+&lt;p&gt;Logo depois será requisitado uma “passphrase”.&lt;/p&gt;
+
+&lt;pre class=&quot;terminal&quot;&gt;
+    Enter passphrase (empty for no passphrase):
+    Enter same passphrase again:
+&lt;/pre&gt;
+
+&lt;p&gt;O processo será concluído e no terminal irá aparecer algo parecido com isso:&lt;/p&gt;
+
+&lt;pre class=&quot;terminal&quot;&gt;
+    SHA256: kjerwerJGwfwef515151IGUYFIvjhbbyudwu456yfbJ seu.email@dominio.com
+    The key's randomart image is:
+    +---[RSA 4096]----+
+    |       +*..+*    |
+    |      =. +.=     |
+    |     . . .o .    |
+    |         o+   E  |
+    |        S= . + o |
+    |        . o o +  |
+    |           .   . |
+    |                 |
+    |                 |
+    +----[SHA256]-----+
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Abraços!&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;ramonsantos_dev&quot;, &quot;picture&quot;=&gt;&quot;/ramon-santos.png&quot;}</name></author><category term="Linux" /><category term="Git" /><category term="Github" /><category term="Deploy" /><summary type="html">Olá, pessoal!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="ramonsantos.github.io/ramon-santos.png" /><media:content medium="image" url="ramonsantos.github.io/ramon-santos.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Como instalar o Eclipse no Linux</title><link href="ramonsantos.github.io/blog/como-instalar-eclipse-linux" rel="alternate" type="text/html" title="Como instalar o Eclipse no Linux" /><published>2016-09-07T00:54:37+00:00</published><updated>2016-09-07T00:54:37+00:00</updated><id>ramonsantos.github.io/blog/como-instalar-eclipse-linux</id><content type="html" xml:base="ramonsantos.github.io/blog/como-instalar-eclipse-linux">&lt;div style=&quot;text-align: center; display:none&quot;&gt;
+  &lt;img src=&quot;/images/como-instalar-eclipse-linux/eclipse.png&quot; style=&quot;max-width: 100%&quot; alt=&quot;Eclipse Linux&quot; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;O &lt;strong&gt;&lt;a href=&quot;https://eclipse.org/&quot;&gt;Eclipse&lt;/a&gt;&lt;/strong&gt; é uma excelente ferramenta, &lt;a href=&quot;https://github.com/eclipse&quot;&gt;open source&lt;/a&gt;, para desenvolvimento de aplicações em &lt;strong&gt;Java&lt;/strong&gt; e em outras linguagens. Neste artigo, será abordado a instalação desta ferramenta em sistemas &lt;strong&gt;Linux&lt;/strong&gt;. O único pré-requisito para ter o Eclipse em sua máquina, é ter o &lt;a href=&quot;https://ramonsantos.github.io/blog/como-instalar-java-fedora/&quot;&gt;JDK instalado&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A primeira coisa a ser feita é o &lt;a href=&quot;https://eclipse.org/downloads/&quot;&gt;download do Eclipse&lt;/a&gt;, sendo que a versão mais recente é o &lt;a href=&quot;https://projects.eclipse.org/releases/neon&quot;&gt;Eclipse Neon&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Dado que o dowload foi feito no diretório &lt;em&gt;“/home/user/Downloads”&lt;/em&gt;, execute no terminal:&lt;/p&gt;
+
+&lt;pre class=&quot;terminal&quot;&gt;
+  $ cd Downloads
+  $ tar -vzxf eclipse*
+  $ sudo chmod 777 /opt
+  $ sudo mv eclipse /opt
+&lt;/pre&gt;
+
+&lt;p&gt;Feito isso, agora vamos criar uma entrada de desktop (atalho) para o Eclipse. No terminal faça:&lt;/p&gt;
+
+&lt;pre class=&quot;terminal&quot;&gt;
+  $ cd /usr/share/applications
+  $ sudo gedit eclipse.desktop
+&lt;/pre&gt;
+
+&lt;p&gt;Uma janela do gedit será aberta, entre com o conteúdo a seguir, salve o arquivo e feche o editor.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/ramonsantos/a032f9938705be19b42ee8f3c334614b.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Por fim, vamos criar um link simbólico.&lt;/p&gt;
+
+&lt;pre class=&quot;terminal&quot;&gt;
+  $ cd /usr/local/bin
+  $ sudo ln -s /opt/eclipse/eclipse
+&lt;/pre&gt;
+
+&lt;p&gt;Se tudo ocorreu bem, basta acessar o Eclipse através do ícone no lançador de seu ambiente gráfico, no meu caso é o gnome, ou pelo terminal:&lt;/p&gt;
+
+&lt;pre class=&quot;terminal&quot;&gt;
+  $ eclipse
+&lt;/pre&gt;
+
+&lt;p&gt;Está Feito! Este artigo foi sucinto pois, como vocês devem ter percebido, a instalação do Eclipse é bastante simples. Originalmente eu fiz esse tutorial para o Ubuntu ainda durante minha graduação, quando eu era monitor da cadeira de Programação Orientada a Objetos (POO) e “forçava” meus colegas a usarem Linux. Além do &lt;strong&gt;Ubuntu&lt;/strong&gt; e do &lt;strong&gt;Fedora&lt;/strong&gt;, o procedimento usado neste post servirá para qualquer distribuição Linux de Desktops.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Abraços!&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;ramonsantos_dev&quot;, &quot;picture&quot;=&gt;&quot;/ramon-santos.png&quot;}</name></author><category term="Ferramentas" /><category term="Desenvolvimento Web" /><category term="Eclipse" /><category term="IDE" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="ramonsantos.github.io/images/como-instalar-eclipse-linux/eclipse.png" /><media:content medium="image" url="ramonsantos.github.io/images/como-instalar-eclipse-linux/eclipse.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Como instalar o Java no Fedora</title><link href="ramonsantos.github.io/blog/como-instalar-java-fedora" rel="alternate" type="text/html" title="Como instalar o Java no Fedora" /><published>2016-09-05T22:10:58+00:00</published><updated>2016-09-05T22:10:58+00:00</updated><id>ramonsantos.github.io/blog/como-instalar-java-fedora</id><content type="html" xml:base="ramonsantos.github.io/blog/como-instalar-java-fedora">&lt;div style=&quot;text-align: center; display:none&quot;&gt;
+  &lt;img src=&quot;/images/como-instalar-java-fedora/java.png&quot; style=&quot;max-width: 100%&quot; alt=&quot;Java Fedora&quot; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Olá, pessoal!&lt;/p&gt;
+
+&lt;p&gt;O objetivo deste post é mostrar &lt;strong&gt;como instalar o JDK no Fedora&lt;/strong&gt;, no entanto, este artigo pode servir para outras distribuições da família &lt;strong&gt;Red Hat&lt;/strong&gt;, como é o caso de &lt;strong&gt;&lt;a href=&quot;https://www.centos.org/&quot;&gt;CentOS&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Primeiramente é preciso fazer o &lt;a href=&quot;http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html&quot;&gt;download do pacote RPM do JDK através do site oficial&lt;/a&gt;. A versão mais atual do JDK neste momento é a 1.8.101. Desta forma, escolha o pacote referente à arquitetura de sua máquina (32 bits ou 64 bits).&lt;/p&gt;
+
+&lt;p&gt;Supondo que o download do pacote de instalação foi feito no o diretório &lt;em&gt;“/home/user/Downloads”&lt;/em&gt; e o arquivo chama-se “jdk-8u101-linux-x64.rpm”, entre com os seguintes comandos no terminal:&lt;/p&gt;
+
+&lt;pre class=&quot;terminal&quot;&gt;
+  $ cd Downloads
+  $ sudo rpm -Uvh jdk-8u101-linux-x64.rpm
+  $ sudo alternatives --install /usr/bin/java java /usr/java/latest/jre/bin/java 200000
+&lt;/pre&gt;
+
+&lt;p&gt;Após a instalação é importante definir qual a versão padrão do &lt;strong&gt;JDK&lt;/strong&gt; no sistema operacional, dado que o &lt;strong&gt;Fedora&lt;/strong&gt; já vem com o &lt;strong&gt;&lt;a href=&quot;http://openjdk.java.net/&quot;&gt;OpenJDK&lt;/a&gt;&lt;/strong&gt; instalado. Para isso, entre com o comando abaixo no terminal:&lt;/p&gt;
+
+&lt;pre class=&quot;terminal&quot;&gt;
+$ sudo alternatives --config java
+
+  Há 3 programas que oferecem &quot;java&quot;.
+
+  Seleção    Comando
+  -----------------------------------------------
+  *  1           java-1.8.0-openjdk.x86_64 (/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.101-1.b14.fc24.x86_64/jre/bin/java)
+  +  2           /usr/java/jdk1.8.0_101/jre/bin/java
+     3           /usr/java/latest/jre/bin/java
+
+  Indique para manter a seleção atual[+] ou digite o número da seleção:
+&lt;/pre&gt;
+
+&lt;p&gt;Neste caso, escolha a opção 2 (“/usr/java/jdk1.8.0_101/jre/bin/java”).&lt;/p&gt;
+
+&lt;p&gt;Para conferir se o JDK está instalado, digite o comando abaixo no terminal e verifique se a saída é parecida com esta:&lt;/p&gt;
+
+&lt;pre class=&quot;terminal&quot;&gt;
+  $ java -version
+    java version &quot;1.8.0_101&quot;
+    Java(TM) SE Runtime Environment (build 1.8.0_101-b13)
+    Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)
+&lt;/pre&gt;
+
+&lt;p&gt;Agora vamos fazer um “&lt;em&gt;Hello Word&lt;/em&gt;” para testar se está tudo funcionando. Abra um editor de texto e entre com o código fonte abaixo:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/ramonsantos/af6cdc910d0a5dd488920a373ac07514.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Salve o arquivo com o nome “&lt;em&gt;Main.java&lt;/em&gt;” e entre no diretório onde este se encontra para compilá-lo:&lt;/p&gt;
+
+&lt;pre class=&quot;terminal&quot;&gt;
+  $ javac Main.java
+&lt;/pre&gt;
+
+&lt;p&gt;O compilador do &lt;strong&gt;Java&lt;/strong&gt;, o &lt;strong&gt;javac&lt;/strong&gt;, gerará um arquivo chamado “&lt;em&gt;Main.class&lt;/em&gt;”, para rodá-lo basta entrar com:&lt;/p&gt;
+
+&lt;pre class=&quot;terminal&quot;&gt;
+  $ java Main
+    Hello, World!
+&lt;/pre&gt;
+
+&lt;p&gt;Por hora é isso, provavelmente eu escreverei um pouco mais sobre Java nos próximos dias, pois estou fazendo um curso de desenvolvido com Java e estou vendo muitas coisas novas :)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Abraços!&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;ramonsantos_dev&quot;, &quot;picture&quot;=&gt;&quot;/ramon-santos.png&quot;}</name></author><category term="Desenvolvimento" /><category term="Android" /><category term="CentOS" /><category term="Desenvolvimento Web" /><category term="Fedora" /><category term="Java" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="ramonsantos.github.io/images/como-instalar-java-fedora/java.png" /><media:content medium="image" url="ramonsantos.github.io/images/como-instalar-java-fedora/java.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Atom: instalação e primeiros passos</title><link href="ramonsantos.github.io/blog/atom-instalacao-primeiros-passos" rel="alternate" type="text/html" title="Atom: instalação e primeiros passos" /><published>2016-08-13T17:27:19+00:00</published><updated>2016-08-13T17:27:19+00:00</updated><id>ramonsantos.github.io/blog/atom-instalacao-primeiros-passos</id><content type="html" xml:base="ramonsantos.github.io/blog/atom-instalacao-primeiros-passos">&lt;div style=&quot;text-align: center; display:none&quot;&gt;
+  &lt;img src=&quot;/images/atom-instalacao-primeiros-passos/atom-icon.png&quot; style=&quot;max-width: 100%&quot; alt=&quot;Atom&quot; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Sempre houve, e haverá, aquela discussão sobre qual IDE/Editor é o melhor. Eu acredito que a resposta para isso vai do gosto de cada um. Felizmente, hoje existe uma boa variedade de editores de texto para desenvolvimento. Entre os mais populares estão: &lt;a href=&quot;https://www.sublimetext.com/&quot;&gt;Sublime Text&lt;/a&gt;, &lt;a href=&quot;https://atom.io/&quot;&gt;Atom&lt;/a&gt;, &lt;a href=&quot;http://brackets.io/&quot;&gt;Brackets&lt;/a&gt;, &lt;a href=&quot;https://wiki.gnome.org/Apps/Gedit&quot;&gt;Gedit&lt;/a&gt;, &lt;a href=&quot;https://notepad-plus-plus.org/&quot;&gt;Notepad++&lt;/a&gt;, &lt;a href=&quot;https://www.gnu.org/software/emacs/&quot;&gt;Emacs&lt;/a&gt;, &lt;a href=&quot;https://www.geany.org/&quot;&gt;Geany&lt;/a&gt;, &lt;a href=&quot;http://www.vim.org/&quot;&gt;Vim&lt;/a&gt;, &lt;a href=&quot;https://macromates.com/&quot;&gt;Textmate&lt;/a&gt; e &lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;Visual Studio Code&lt;/a&gt;. Atualmente o meu editor preferido é o &lt;strong&gt;Atom&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;O Atom é um editor de texto open source indicado para desenvolvedores. Foi inicialmente desenvolvido pelo &lt;strong&gt;GitHub&lt;/strong&gt; e seu repositório oficial &lt;a href=&quot;https://github.com/atom/atom&quot;&gt;está disponível no próprio Github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;instalação&quot;&gt;Instalação&lt;/h2&gt;
+
+&lt;p&gt;Uma das características deste editor é que ele é multiplataforma. Para &lt;strong&gt;Linux&lt;/strong&gt;, o Atom é &lt;a href=&quot;https://atom.io/&quot; title=&quot;Site oficial do Atom&quot; target=&quot;_blank&quot;&gt;disponibilizado&lt;/a&gt; em pacotes &lt;em&gt;.deb&lt;/em&gt; e &lt;em&gt;.rpm&lt;/em&gt;, além da possibilidade de instalação a partir dos fontes e contando com um excelente &lt;a href=&quot;https://github.com/atom/atom/blob/master/docs/build-instructions/linux.md&quot; target=&quot;_blank&quot;&gt;tutorial&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Com o pacote de sua distribuição baixado, basta entrar no diretório onde o mesmo se encontra e executar um dos comando abaixo de acordo com sua distro.&lt;/p&gt;
+
+&lt;h4 id=&quot;família-debian-debian-ubuntu-linux-mint-e-etc&quot;&gt;Família Debian (Debian, Ubuntu, Linux Mint e etc):&lt;/h4&gt;
+
+&lt;pre class=&quot;terminal&quot;&gt;
+  $ sudo dpkg -i atom-amd64.deb
+&lt;/pre&gt;
+
+&lt;h4 id=&quot;família-red-hat-fedora-centos-opensuse-e-etc&quot;&gt;Família Red Hat (Fedora, CentOS, openSUSE e etc):&lt;/h4&gt;
+
+&lt;pre class=&quot;terminal&quot;&gt;
+  $ sudo rpm -Uvh atom.x86_64.rpm
+&lt;/pre&gt;
+
+&lt;h2 id=&quot;recursos-nativos&quot;&gt;Recursos nativos&lt;/h2&gt;
+
+&lt;p&gt;Por padrão, o Atom já vem como vários recursos uteis, entre eles temos:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Integração com o Github&lt;/em&gt;;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Gerenciador de pacotes&lt;/em&gt;;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Syntax highlight&lt;/em&gt;;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Live preview para arquivos Markdown&lt;/em&gt;;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Divisão de Painéis (Split)&lt;/em&gt;;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Tree view para diretórios e arquivos&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;/images/atom-instalacao-primeiros-passos/atom-live-preview-md.png&quot; target=&quot;_blank&quot;&gt;&lt;figure&gt;&lt;img src=&quot;/images/atom-instalacao-primeiros-passos/atom-live-preview-md.png&quot; style=&quot;max-width: 100%&quot; alt=&quot;Live Preview para Markdown&quot; title=&quot;Live Preview para Markdown&quot; /&gt;&lt;figcaption class=&quot;text-center&quot;&gt;Live Preview para Markdown.&lt;/figcaption&gt;&lt;/figure&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;/images/atom-instalacao-primeiros-passos/atom-split.png&quot; target=&quot;_blank&quot;&gt;&lt;figure&gt;&lt;img src=&quot;/images/atom-instalacao-primeiros-passos/atom-split.png&quot; style=&quot;max-width: 100%&quot; alt=&quot;Divisões de Painéis (Split)&quot; title=&quot;Divisões de Painéis (Split)&quot; /&gt;&lt;figcaption class=&quot;text-center&quot;&gt;Divisões de Painéis (Split).&lt;/figcaption&gt;&lt;/figure&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;personalizando-o-atom&quot;&gt;Personalizando o Atom&lt;/h2&gt;
+
+&lt;p&gt;Agora vamos para a melhor parte, os pacote. Como mencionado acima, o gerenciador do pacotes já vem ativado por padrão, para acessá-lo entre no menu &lt;em&gt;Edit&lt;/em&gt; &amp;gt; &lt;em&gt;Preferences&lt;/em&gt;, vai aparecer a aba “&lt;em&gt;Settings&lt;/em&gt;”.&lt;/p&gt;
+
+&lt;p&gt;Na aba “Settings” podemos definir teclas de atalhos (Keybindings), configuração gerais (Settings), instalar (install) e atualizar (updates) pacotes e temas, gerenciar pacotes instalados (Packages) e escolher o visual da aplicação (Themes).&lt;/p&gt;
+
+&lt;p&gt;Para ilustrar o potencial de personalização do atom, vamos deixá-lo parecido com o &lt;strong&gt;Sublime Text&lt;/strong&gt;. Duas características são icônicas no Sublime Text: o tema “&lt;strong&gt;monokai&lt;/strong&gt;” e o “&lt;strong&gt;minimap&lt;/strong&gt;”.&lt;/p&gt;
+
+&lt;h3 id=&quot;instalando-um-tema&quot;&gt;Instalando um tema&lt;/h3&gt;
+
+&lt;p&gt;Para instalar o tema vá em “&lt;em&gt;Install&lt;/em&gt;”, digite “&lt;em&gt;monokai&lt;/em&gt;” e click em “&lt;em&gt;Themes&lt;/em&gt;”. Entre as opções escolha “&lt;em&gt;monokai&lt;/em&gt;” do usuário “&lt;em&gt;kevinsawicki&lt;/em&gt;” e click em “&lt;em&gt;Install&lt;/em&gt;”.&lt;/p&gt;
+
+&lt;p&gt;Depois de instalação, vá em “&lt;em&gt;Themes&lt;/em&gt;” para configurar o tema. Em “&lt;em&gt;UI Theme&lt;/em&gt;” escolha “&lt;em&gt;Atom Light&lt;/em&gt;” e em “&lt;em&gt;Syntax Theme&lt;/em&gt;” escolha “&lt;em&gt;Monokai&lt;/em&gt;”.&lt;/p&gt;
+
+&lt;h3 id=&quot;instalando-um-pacote&quot;&gt;Instalando um pacote&lt;/h3&gt;
+
+&lt;p&gt;Para instalar um pacote o procedimento é similar, vá em “&lt;em&gt;Install&lt;/em&gt;”, digite “&lt;em&gt;minimap&lt;/em&gt;” e precione “&lt;em&gt;enter&lt;/em&gt;” ou click em “&lt;em&gt;Packages&lt;/em&gt;”. Escolha o pacote “&lt;em&gt;minimap&lt;/em&gt;” do usuário “&lt;em&gt;atom-minimap&lt;/em&gt;” e click em “&lt;em&gt;Install&lt;/em&gt;”.&lt;/p&gt;
+
+&lt;p&gt;Geralmente os pacotes são ativados logo após serem instalados, para conferir vá em “&lt;em&gt;Packages&lt;/em&gt;” e veja se o pacote está ativo, caso não esteja click em “&lt;em&gt;Enable&lt;/em&gt;”.&lt;/p&gt;
+
+&lt;p&gt;A aparencia do Atom ficará como na figura abaixo.&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;/images/atom-instalacao-primeiros-passos/atom-monokai-theme.png&quot; target=&quot;_blank&quot;&gt;&lt;figure&gt;&lt;img src=&quot;/images/atom-instalacao-primeiros-passos/atom-monokai-theme.png&quot; style=&quot;max-width: 100%&quot; alt=&quot;Visual do Atom depois da personalização&quot; title=&quot;Visual do Atom depois da personalização&quot; /&gt;&lt;figcaption class=&quot;text-center&quot;&gt;Visual do Atom depois da personalização.&lt;/figcaption&gt;&lt;/figure&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Por enquanto é isso. Em breve vou mostrar outras características do Atom.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Abraços!&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;ramonsantos_dev&quot;, &quot;picture&quot;=&gt;&quot;/ramon-santos.png&quot;}</name></author><category term="Ferramentas" /><category term="Atom" /><category term="Desenvolvimento Web" /><category term="IDE" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="ramonsantos.github.io/images/atom-instalacao-primeiros-passos/atom-icon.png" /><media:content medium="image" url="ramonsantos.github.io/images/atom-instalacao-primeiros-passos/atom-icon.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Como instalar o Gnuplot no Fedora</title><link href="ramonsantos.github.io/blog/como-instalar-gnuplot-fedora" rel="alternate" type="text/html" title="Como instalar o Gnuplot no Fedora" /><published>2016-08-06T17:42:50+00:00</published><updated>2016-08-06T17:42:50+00:00</updated><id>ramonsantos.github.io/blog/como-instalar-gnuplot-fedora</id><content type="html" xml:base="ramonsantos.github.io/blog/como-instalar-gnuplot-fedora">&lt;p&gt;Olá, pessoal!&lt;/p&gt;
+
+&lt;p&gt;Hoje vamos ver como instalar o &lt;strong&gt;Gnuplot&lt;/strong&gt; no &lt;strong&gt;Fedora&lt;/strong&gt;. Para quem não conhece, &lt;a href=&quot;http://www.gnuplot.info/&quot;&gt;Gnuplot&lt;/a&gt; é uma ferramenta muito usada no meio acadêmico para plotar gráficos de funções matemáticas em 2D e 3D, sendo que a saída pode ser apresentada diretamente na tela ou exportada para arquivos em diversos formatos, como &lt;em&gt;PNG&lt;/em&gt;, &lt;em&gt;JPEG&lt;/em&gt;, &lt;em&gt;SVG&lt;/em&gt; e &lt;em&gt;EPS&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;O Gnuplot não é disponibilizado por padrão nos repositórios oficiais do Fedora, desta forma, é necessário &lt;a href=&quot;https://sourceforge.net/projects/gnuplot/files/gnuplot/&quot;&gt;fazer o download do software manualmente&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Depois de fazer o download devemos abrir o terminal, entrar no diretório onde está o arquivo e descompactá-lo. Supondo que o nome do arquivo é &lt;em&gt;“gnuplot-5.0.3.tar.gz”&lt;/em&gt; e está em &lt;em&gt;“/home/user/Downloads”&lt;/em&gt;, entre com os comandos abaixo no terminal.&lt;/p&gt;
+
+&lt;p&gt;Entrar no diretório do download:&lt;/p&gt;
+
+&lt;pre class=&quot;terminal&quot;&gt;
+  $ cd Downloads
+&lt;/pre&gt;
+
+&lt;p&gt;Descompactar o arquivo de instalação:&lt;/p&gt;
+
+&lt;pre class=&quot;terminal&quot;&gt;
+  $ tar -vzxf gnuplot-5.0.3.tar.gz
+&lt;/pre&gt;
+
+&lt;p&gt;Entrar no diretório descompactado:&lt;/p&gt;
+
+&lt;pre class=&quot;terminal&quot;&gt;
+  $ cd gnuplot-5.0.3
+&lt;/pre&gt;
+
+&lt;p&gt;Agora vamos para a instalação propriamente dita. Entre com os comandos abaixo:&lt;/p&gt;
+
+&lt;pre class=&quot;terminal&quot;&gt;
+  $ ./configure
+&lt;/pre&gt;
+
+&lt;pre class=&quot;terminal&quot;&gt;
+  $ sudo make install
+&lt;/pre&gt;
+
+&lt;p&gt;Se não houver problemas durante esse processo, a instalação será concluída com sucesso. Para verificar se o software está funcionando, vamos fazer uma espécie de &lt;em&gt;“Hello Word”&lt;/em&gt;, ou seja, vamos plotar uma gráfico simples.&lt;/p&gt;
+
+&lt;p&gt;Para entrar no Gnuplot vá ao terminal e faça:&lt;/p&gt;
+
+&lt;pre class=&quot;terminal&quot;&gt;
+  $ gnuplot
+&lt;/pre&gt;
+
+&lt;p&gt;Com o Gnuplot aberto no terminal, vamos plotar o gráfico de sen(x):&lt;/p&gt;
+
+&lt;pre class=&quot;terminal&quot;&gt;
+  gnuplot&amp;gt; plot sin(x)
+&lt;/pre&gt;
+
+&lt;p&gt;Com isso, uma janela deverá ser aberta com o gráfico da função como na figura abaixo.&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;/images/como-instalar-gnuplot-fedora/gnuplot-sin-x.png&quot; target=&quot;_blank&quot;&gt;&lt;figure&gt;&lt;img src=&quot;/images/como-instalar-gnuplot-fedora/gnuplot-sin-x.png&quot; style=&quot;max-width: 100%&quot; alt=&quot;Imagem plotada através do Gnuplot&quot; title=&quot;Imagem plotada através do Gnuplot&quot; /&gt;&lt;figcaption class=&quot;text-center&quot;&gt;Imagem plotada através do Gnuplot.&lt;/figcaption&gt;&lt;/figure&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Fácil, não é? Eu usei o Gnuplot para gerar os gráficos do &lt;a href=&quot;http://www.slideshare.net/RamonSantos28/tcc-avaliao-de-dependabilidade-e-anlise-de-sensibilidade-de-uma-plataforma-como-servio-paas&quot;&gt;meu TCC&lt;/a&gt; e a qualidade ficou muito boa. Para finalizar, uma outra dica é exportar os gráficos gerados para formatos vetoriais, como o &lt;strong&gt;EPS&lt;/strong&gt; ou o &lt;strong&gt;SVG&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;Abraços!&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;ramonsantos_dev&quot;, &quot;picture&quot;=&gt;&quot;/ramon-santos.png&quot;}</name></author><category term="Ferramentas" /><category term="Fedora" /><category term="Ferramentas Acadêmicas" /><summary type="html">Olá, pessoal!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="ramonsantos.github.io/images/como-instalar-gnuplot-fedora/gnuplot-sin-x.png" /><media:content medium="image" url="ramonsantos.github.io/images/como-instalar-gnuplot-fedora/gnuplot-sin-x.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Hello, World!</title><link href="ramonsantos.github.io/blog/hello-world" rel="alternate" type="text/html" title="Hello, World!" /><published>2016-08-05T20:23:42+00:00</published><updated>2016-08-05T20:23:42+00:00</updated><id>ramonsantos.github.io/blog/hello-world</id><content type="html" xml:base="ramonsantos.github.io/blog/hello-world">&lt;p&gt;Olá, pessoal!&lt;/p&gt;
+
+&lt;p&gt;Já faz um bom tempo que eu queria ter um site/blog onde eu pudesse escrever sobre coisas que descobri, problemas que consegui resolver e passar um pouco do conhecimento adquirido no meu dia a dia. No entanto, nunca botei essa ideia em prática por diversos motivos, como: falta de tempo, falta de conhecimento em frontend e falta de dinheiro. Cheguei a cogitar o uso do &lt;a href=&quot;https://br.wordpress.com/&quot;&gt;Wordpress.com&lt;/a&gt;, mas essa plataforma é bastante limitada e pouco customizável em sua versão grátis.&lt;/p&gt;
+
+&lt;p&gt;O problema da falta de tempo foi amenizado quando eu terminei minha graduação. Era hora de tirar alguns projetos do papel. Como já tinha trabalhado com &lt;a href=&quot;https://www.joomla.org/&quot;&gt;&lt;strong&gt;Joomla!&lt;/strong&gt;&lt;/a&gt; no passado, escolhi esse CMS para o site. Fiz um levantamento das boas práticas referentes a segurança e ao desempenho do Joomla! (pretendo falar delas posteriormente), dicas de SEO, defini um layout, procurei frameworks para fazer o template e fui em frente. Fiz o site de jeito que queria. Mas na hora de hospedar, eu resolvi adiar novamente, grana curta.&lt;/p&gt;
+
+&lt;p&gt;Alguns dias depois eu estava conversando com um conhecido sobre o &lt;a href=&quot;https://github.com/&quot;&gt;&lt;strong&gt;Github&lt;/strong&gt;&lt;/a&gt;, sobre o quanto que ele é top, sobre os serviços irem muito além da hospedagem de código fonte, sobre a possibilidade de hospedar um site estático com o &lt;a href=&quot;https://pages.github.com/&quot;&gt;&lt;strong&gt;Github Pages&lt;/strong&gt;&lt;/a&gt;. Como já fazia alguns anos que tinha sido apresentado ao Github Pages, resolvi dar uma olhada para ver como andava o projeto. Ainda não suportava servidores de aplicação ou banco de dados, porém eu vi que dava para fazer um blog com uma ferramenta chamada &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;&lt;strong&gt;Jekyll&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;O Jekyll é um gerador de site estático, muito usado por desenvolvedores, onde os posts são escritos com &lt;a href=&quot;https://daringfireball.net/projects/markdown/&quot;&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/a&gt;. Perfeito! Era exatamente isso que eu queria. Pesquisando um pouco mais sobre esses tipos de geradores, eu encontrei vários, os que mais gostei foram o &lt;a href=&quot;https://github.com/getpelican/&quot;&gt;&lt;strong&gt;Pelican&lt;/strong&gt;&lt;/a&gt; e o &lt;a href=&quot;https://hexo.io/&quot;&gt;&lt;strong&gt;Hexo&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Eu testei essas três opções e me identifiquei mais com o Hexo. Em seguida, eu fui procurar por um &lt;a href=&quot;https://hexo.io/themes/&quot;&gt;template para Hexo&lt;/a&gt; que mais se parecesse com o que eu tinha feito para o site em Joomla!. O mais parecido com o que eu queria foi o &lt;a href=&quot;https://github.com/ptsteadman/hexo-theme-corporate/&quot;&gt;Corporate&lt;/a&gt;, muito bonito por sinal. Eu clonei o Corporate, que estava disponível no Github, e fiz &lt;a href=&quot;https://github.com/ramonsantos/ruby-tuesday-theme/&quot;&gt;minhas modificações&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Bom, esse foi um breve resumo do que fiz até agora para botar esse site no ar. Nos próximos artigos eu pretendo abordar algumas das técnicas que aprendi durante esse processo. Espero que gostem e vamos ver no que vai dar! :)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Abraços!&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;ramonsantos_dev&quot;, &quot;picture&quot;=&gt;&quot;/ramon-santos.png&quot;}</name></author><category term="Off" /><category term="Off" /><summary type="html">Olá, pessoal!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="ramonsantos.github.io/ramon-santos.png" /><media:content medium="image" url="ramonsantos.github.io/ramon-santos.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
