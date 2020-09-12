@@ -12,10 +12,6 @@ image:
   path: "/images/atom-instalacao-primeiros-passos/atom-icon.png"
 ---
 
-<div style="text-align: center; display:none">
-  <img src="/images/atom-instalacao-primeiros-passos/atom-icon.png" style="max-width: 100%" alt="Atom" />
-</div>
-
 Sempre houve, e haverá, aquela discussão sobre qual IDE/Editor é o melhor. Eu acredito que a resposta para isso vai do gosto de cada um. Felizmente, hoje existe uma boa variedade de editores de texto para desenvolvimento. Entre os mais populares estão: [Sublime Text](https://www.sublimetext.com/), [Atom](https://atom.io/), [Brackets](http://brackets.io/), [Gedit](https://wiki.gnome.org/Apps/Gedit), [Notepad++](https://notepad-plus-plus.org/), [Emacs](https://www.gnu.org/software/emacs/), [Geany](https://www.geany.org/), [Vim](http://www.vim.org/), [Textmate](https://macromates.com/) e [Visual Studio Code](https://code.visualstudio.com/). Atualmente o meu editor preferido é o <strong>Atom</strong>.
 
 O Atom é um editor de texto open source indicado para desenvolvedores. Foi inicialmente desenvolvido pelo <strong>GitHub</strong> e seu repositório oficial [está disponível no próprio Github](https://github.com/atom/atom).

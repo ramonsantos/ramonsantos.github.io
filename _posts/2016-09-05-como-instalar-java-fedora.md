@@ -14,10 +14,6 @@ image:
   path: "/images/como-instalar-java-fedora/java.png"
 ---
 
-<div style="text-align: center; display:none">
-  <img src="/images/como-instalar-java-fedora/java.png" style="max-width: 100%" alt="Java Fedora" />
-</div>
-
 Olá, pessoal!
 
 O objetivo deste post é mostrar **como instalar o JDK no Fedora**, no entanto, este artigo pode servir para outras distribuições da família **Red Hat**, como é o caso de **[CentOS](https://www.centos.org/)**.

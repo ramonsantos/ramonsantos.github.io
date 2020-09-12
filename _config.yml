@@ -24,8 +24,8 @@ description: Blog sobre desenvolvimento
 tagline: Blog sobre desenvolvimento
 lang: pt_BR
 baseurl: ""
-url: "ramonsantos.github.io"
-permalink: "/blog/:title"
+url: "https://ramonsantos.github.io"
+permalink: "/blog/:title/"
 
 # Build settings
 theme: shine-on-you-crazy-diamond-theme
@@ -36,6 +36,7 @@ plugins:
   - jekyll-archives
   - jekyll-target-blank
   - jekyll-paginate-v2
+  - jekyll-sitemap
 
 # Exclude from processing.
 # The following items will not be processed, by default.
