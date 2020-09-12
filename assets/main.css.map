@@ -3,17 +3,17 @@
 	"file": "main.css",
 	"sources": [
 		"main.scss",
-		"vendor/bundle/ruby/2.7.0/gems/shine-on-you-crazy-diamond-theme-0.5.0/_sass/_variables.scss",
-		"vendor/bundle/ruby/2.7.0/gems/shine-on-you-crazy-diamond-theme-0.5.0/_sass/_mixin.scss",
-		"vendor/bundle/ruby/2.7.0/gems/shine-on-you-crazy-diamond-theme-0.5.0/_sass/_reset.scss",
-		"vendor/bundle/ruby/2.7.0/gems/shine-on-you-crazy-diamond-theme-0.5.0/_sass/_global.scss",
-		"vendor/bundle/ruby/2.7.0/gems/shine-on-you-crazy-diamond-theme-0.5.0/_sass/_header.scss",
-		"vendor/bundle/ruby/2.7.0/gems/shine-on-you-crazy-diamond-theme-0.5.0/_sass/_content.scss",
-		"vendor/bundle/ruby/2.7.0/gems/shine-on-you-crazy-diamond-theme-0.5.0/_sass/_about_page.scss",
-		"vendor/bundle/ruby/2.7.0/gems/shine-on-you-crazy-diamond-theme-0.5.0/_sass/_sidebar.scss",
-		"vendor/bundle/ruby/2.7.0/gems/shine-on-you-crazy-diamond-theme-0.5.0/_sass/_post.scss",
-		"vendor/bundle/ruby/2.7.0/gems/shine-on-you-crazy-diamond-theme-0.5.0/_sass/_mobile_menu.scss",
-		"vendor/bundle/ruby/2.7.0/gems/shine-on-you-crazy-diamond-theme-0.5.0/_sass/_footer.scss"
+		"vendor/bundle/ruby/2.7.0/gems/shine-on-you-crazy-diamond-theme-0.5.2/_sass/_variables.scss",
+		"vendor/bundle/ruby/2.7.0/gems/shine-on-you-crazy-diamond-theme-0.5.2/_sass/_mixin.scss",
+		"vendor/bundle/ruby/2.7.0/gems/shine-on-you-crazy-diamond-theme-0.5.2/_sass/_reset.scss",
+		"vendor/bundle/ruby/2.7.0/gems/shine-on-you-crazy-diamond-theme-0.5.2/_sass/_global.scss",
+		"vendor/bundle/ruby/2.7.0/gems/shine-on-you-crazy-diamond-theme-0.5.2/_sass/_header.scss",
+		"vendor/bundle/ruby/2.7.0/gems/shine-on-you-crazy-diamond-theme-0.5.2/_sass/_content.scss",
+		"vendor/bundle/ruby/2.7.0/gems/shine-on-you-crazy-diamond-theme-0.5.2/_sass/_about_page.scss",
+		"vendor/bundle/ruby/2.7.0/gems/shine-on-you-crazy-diamond-theme-0.5.2/_sass/_sidebar.scss",
+		"vendor/bundle/ruby/2.7.0/gems/shine-on-you-crazy-diamond-theme-0.5.2/_sass/_post.scss",
+		"vendor/bundle/ruby/2.7.0/gems/shine-on-you-crazy-diamond-theme-0.5.2/_sass/_mobile_menu.scss",
+		"vendor/bundle/ruby/2.7.0/gems/shine-on-you-crazy-diamond-theme-0.5.2/_sass/_footer.scss"
 	],
 	"sourcesContent": [
 		"@import 'variables';\n@import 'mixin';\n@import 'reset';\n@import 'global';\n@import 'header';\n@import 'content';\n@import 'about_page';\n@import 'sidebar';\n@import 'post';\n@import 'mobile_menu';\n@import 'footer';\n",
