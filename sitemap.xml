@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://ramonsantos.github.io/blog/hello-world/</loc>
-<lastmod>2016-08-05T20:23:42+00:00</lastmod>
-</url>
-<url>
 <loc>https://ramonsantos.github.io/blog/como-instalar-gnuplot-fedora/</loc>
 <lastmod>2016-08-06T17:42:50+00:00</lastmod>
 </url>
@@ -31,34 +27,16 @@
 <loc>https://ramonsantos.github.io/blog/</loc>
 </url>
 <url>
-<loc>https://ramonsantos.github.io/tags/off/</loc>
-</url>
-<url>
 <loc>https://ramonsantos.github.io/tags/fedora/</loc>
 </url>
 <url>
 <loc>https://ramonsantos.github.io/tags/ferramentas-acad%C3%AAmicas/</loc>
 </url>
 <url>
-<loc>https://ramonsantos.github.io/tags/atom/</loc>
-</url>
-<url>
-<loc>https://ramonsantos.github.io/tags/desenvolvimento-web/</loc>
-</url>
-<url>
 <loc>https://ramonsantos.github.io/tags/ide/</loc>
 </url>
 <url>
-<loc>https://ramonsantos.github.io/tags/android/</loc>
-</url>
-<url>
-<loc>https://ramonsantos.github.io/tags/centos/</loc>
-</url>
-<url>
 <loc>https://ramonsantos.github.io/tags/java/</loc>
-</url>
-<url>
-<loc>https://ramonsantos.github.io/tags/eclipse/</loc>
 </url>
 <url>
 <loc>https://ramonsantos.github.io/tags/git/</loc>
@@ -68,9 +46,6 @@
 </url>
 <url>
 <loc>https://ramonsantos.github.io/tags/deploy/</loc>
-</url>
-<url>
-<loc>https://ramonsantos.github.io/categories/off/</loc>
 </url>
 <url>
 <loc>https://ramonsantos.github.io/categories/ferramentas/</loc>
@@ -83,6 +58,6 @@
 </url>
 <url>
 <loc>https://ramonsantos.github.io/googlec4ec1c170ce37886.html</loc>
-<lastmod>2020-09-22T23:00:52+00:00</lastmod>
+<lastmod>2020-09-22T23:04:04+00:00</lastmod>
 </url>
 </urlset>
