@@ -4,9 +4,6 @@ title: Como instalar o Java no Fedora
 date: 2016-09-05 19:10:58 -0300
 categories: Desenvolvimento
 tags:
-  - Android
-  - CentOS
-  - Desenvolvimento Web
   - Fedora
   - Java
 description:

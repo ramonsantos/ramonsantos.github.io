@@ -4,8 +4,7 @@ title: Como instalar o Eclipse no Linux
 date: 2016-09-06 21:54:37 -0300
 categories: 'Ferramentas'
 tags:
-  - Desenvolvimento Web
-  - Eclipse
+  - Java
   - IDE
 description:
 image:

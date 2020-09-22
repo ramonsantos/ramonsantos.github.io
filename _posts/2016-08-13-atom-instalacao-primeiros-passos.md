@@ -4,8 +4,6 @@ title: "Atom: instalação e primeiros passos"
 date: 2016-08-13 14:27:19 -0300
 categories: 'Ferramentas'
 tags:
-  - Atom
-  - Desenvolvimento Web
   - IDE
 description: Instalação e introdução ao editor Atom.
 image:
