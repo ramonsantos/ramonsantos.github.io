@@ -11,8 +11,6 @@ image:
   path: "/images/como-instalar-java-fedora/java.png"
 ---
 
-Olá, pessoal!
-
 O objetivo deste post é mostrar **como instalar o JDK no Fedora**, no entanto, este artigo pode servir para outras distribuições da família **Red Hat**, como é o caso de **[CentOS](https://www.centos.org/)**.
 
 Primeiramente é preciso fazer o [download do pacote RPM do JDK através do site oficial](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html). A versão mais atual do JDK neste momento é a 1.8.101. Desta forma, escolha o pacote referente à arquitetura de sua máquina (32 bits ou 64 bits).
@@ -69,7 +67,4 @@ O compilador do **Java**, o **javac**, gerará um arquivo chamado "*Main.class*"
     Hello, World!
 </pre>
 
-Por hora é isso, provavelmente eu escreverei um pouco mais sobre Java nos próximos dias, pois estou fazendo um curso de desenvolvido com Java e estou vendo muitas coisas novas :)
-
-<br>
-Abraços!
+Após a instalação do Java, talvez você também queira instalar o [Eclipse](/blog/como-instalar-eclipse-linux/) ;)

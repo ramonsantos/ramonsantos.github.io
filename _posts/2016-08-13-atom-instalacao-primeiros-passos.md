@@ -4,15 +4,13 @@ title: "Atom: instalação e primeiros passos"
 date: 2016-08-13 14:27:19 -0300
 categories: 'Ferramentas'
 tags:
-  - IDE
+  - Ferramentas de Desenvolvimento
 description: Instalação e introdução ao editor Atom.
 image:
   path: "/images/atom-instalacao-primeiros-passos/atom-icon.png"
 ---
 
-Sempre houve, e haverá, aquela discussão sobre qual IDE/Editor é o melhor. Eu acredito que a resposta para isso vai do gosto de cada um. Felizmente, hoje existe uma boa variedade de editores de texto para desenvolvimento. Entre os mais populares estão: [Sublime Text](https://www.sublimetext.com/), [Atom](https://atom.io/), [Brackets](http://brackets.io/), [Gedit](https://wiki.gnome.org/Apps/Gedit), [Notepad++](https://notepad-plus-plus.org/), [Emacs](https://www.gnu.org/software/emacs/), [Geany](https://www.geany.org/), [Vim](http://www.vim.org/), [Textmate](https://macromates.com/) e [Visual Studio Code](https://code.visualstudio.com/). Atualmente o meu editor preferido é o <strong>Atom</strong>.
-
-O Atom é um editor de texto open source indicado para desenvolvedores. Foi inicialmente desenvolvido pelo <strong>GitHub</strong> e seu repositório oficial [está disponível no próprio Github](https://github.com/atom/atom).
+O Atom é um editor de texto open source muito usado por desenvolvedores. Foi inicialmente desenvolvido pelo <strong>GitHub</strong> e seu repositório oficial [está disponível no próprio Github](https://github.com/atom/atom).
 
 ## Instalação
 
@@ -67,12 +65,8 @@ Para instalar um pacote o procedimento é similar, vá em "<em>Install</em>", di
 
 Geralmente os pacotes são ativados logo após serem instalados, para conferir vá em "<em>Packages</em>" e veja se o pacote está ativo, caso não esteja click em "<em>Enable</em>".
 
-A aparencia do Atom ficará como na figura abaixo.
-
 <div style="text-align: center"><a href="/images/atom-instalacao-primeiros-passos/atom-monokai-theme.png" target="_blank"><figure><img src="/images/atom-instalacao-primeiros-passos/atom-monokai-theme.png" style="max-width: 100%" alt="Visual do Atom depois da personalização" title="Visual do Atom depois da personalização" /><figcaption class="text-center">Visual do Atom depois da personalização.</figcaption></figure></a>
 </div>
 
-Por enquanto é isso. Em breve vou mostrar outras características do Atom.
+A aparencia do Atom ficará como na figura acima.
 
-<br>
-Abraços!

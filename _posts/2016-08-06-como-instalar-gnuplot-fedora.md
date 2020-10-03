@@ -11,9 +11,7 @@ image:
   path: "/images/como-instalar-gnuplot-fedora/gnuplot-sin-x.png"
 ---
 
-Olá, pessoal!
-
-Hoje vamos ver como instalar o **Gnuplot** no **Fedora**. Para quem não conhece, [Gnuplot](http://www.gnuplot.info/) é uma ferramenta muito usada no meio acadêmico para plotar gráficos de funções matemáticas em 2D e 3D, sendo que a saída pode ser apresentada diretamente na tela ou exportada para arquivos em diversos formatos, como *PNG*, *JPEG*, *SVG* e *EPS*.
+Vamos ver como instalar o **Gnuplot** no **Fedora**. Para quem não conhece, [Gnuplot](http://www.gnuplot.info/) é uma ferramenta muito usada no meio acadêmico para plotar gráficos de funções matemáticas em 2D e 3D, sendo que a saída pode ser apresentada diretamente na tela ou exportada para arquivos em diversos formatos, como *PNG*, *JPEG*, *SVG* e *EPS*.
 
 O Gnuplot não é disponibilizado por padrão nos repositórios oficiais do Fedora, desta forma, é necessário [fazer o download do software manualmente](https://sourceforge.net/projects/gnuplot/files/gnuplot/).
 
@@ -66,7 +64,4 @@ Com isso, uma janela deverá ser aberta com o gráfico da função como na figur
 <div style="text-align: center"><a href="/images/como-instalar-gnuplot-fedora/gnuplot-sin-x.png" target="_blank"><figure><img src="/images/como-instalar-gnuplot-fedora/gnuplot-sin-x.png" style="max-width: 100%" alt="Imagem plotada através do Gnuplot" title="Imagem plotada através do Gnuplot" /><figcaption class="text-center">Imagem plotada através do Gnuplot.</figcaption></figure></a>
 </div>
 
-Fácil, não é? Eu usei o Gnuplot para gerar os gráficos do [meu TCC](http://www.slideshare.net/RamonSantos28/tcc-avaliao-de-dependabilidade-e-anlise-de-sensibilidade-de-uma-plataforma-como-servio-paas) e a qualidade ficou muito boa. Para finalizar, uma outra dica é exportar os gráficos gerados para formatos vetoriais, como o **EPS** ou o **SVG**.
-
-<br/>
-<p>Abraços!</p>
+Eu usei o Gnuplot para gerar os gráficos do [meu TCC](http://www.slideshare.net/RamonSantos28/tcc-avaliao-de-dependabilidade-e-anlise-de-sensibilidade-de-uma-plataforma-como-servio-paas) e a qualidade ficou muito boa. Para finalizar, uma outra dica é exportar os gráficos gerados para formatos vetoriais, como o **EPS** ou o **SVG**.

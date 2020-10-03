@@ -4,8 +4,8 @@ title: Como instalar o Eclipse no Linux
 date: 2016-09-06 21:54:37 -0300
 categories: 'Ferramentas'
 tags:
+  - Ferramentas de Desenvolvimento
   - Java
-  - IDE
 description:
 image:
   path: "/images/como-instalar-eclipse-linux/eclipse.png"
@@ -47,8 +47,3 @@ Se tudo ocorreu bem, basta acessar o Eclipse através do ícone no lançador de 
 <pre class="terminal">
   $ eclipse
 </pre>
-
-Está Feito! Este artigo foi sucinto pois, como vocês devem ter percebido, a instalação do Eclipse é bastante simples. Originalmente eu fiz esse tutorial para o Ubuntu ainda durante minha graduação, quando eu era monitor da cadeira de Programação Orientada a Objetos (POO) e "forçava" meus colegas a usarem Linux. Além do <strong>Ubuntu</strong> e do <strong>Fedora</strong>, o procedimento usado neste post servirá para qualquer distribuição Linux de Desktops.
-
-<br>
-Abraços!

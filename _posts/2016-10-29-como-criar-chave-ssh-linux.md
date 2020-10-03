@@ -7,7 +7,6 @@ permalink: '/blog/como-criar-chave-ssh-linux/'
 tags:
   - Git
   - Github
-  - Deploy
 description:
 ---
 
@@ -57,6 +56,3 @@ O processo será concluído e no terminal irá aparecer algo parecido com isso:
     |                 |
     +----[SHA256]-----+
 </pre>
-
-<br>
-Abraços!
