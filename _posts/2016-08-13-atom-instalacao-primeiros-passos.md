@@ -20,15 +20,15 @@ Com o pacote de sua distribuição baixado, basta entrar no diretório onde o me
 
 #### Família Debian (Debian, Ubuntu, Linux Mint e etc):
 
-<pre class="terminal">
-  $ sudo dpkg -i atom-amd64.deb
-</pre>
+<pre><code class="shell terminal">
+$ sudo dpkg -i atom-amd64.deb
+</code></pre>
 
 #### Família Red Hat (Fedora, CentOS, openSUSE e etc):
 
-<pre class="terminal">
-  $ sudo rpm -Uvh atom.x86_64.rpm
-</pre>
+<pre><code class="shell terminal">
+$ sudo rpm -Uvh atom.x86_64.rpm
+</code></pre>
 
 ## Recursos nativos
 

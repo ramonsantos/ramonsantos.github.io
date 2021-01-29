@@ -19,45 +19,45 @@ Depois de fazer o download devemos abrir o terminal, entrar no diretório onde e
 
 Entrar no diretório do download:
 
-<pre class="terminal">
-  $ cd Downloads
-</pre>
+<pre><code class="shell terminal">
+$ cd Downloads
+</code></pre>
 
 <p>Descompactar o arquivo de instalação:</p>
 
-<pre class="terminal">
-  $ tar -vzxf gnuplot-5.0.3.tar.gz
-</pre>
+<pre><code class="shell terminal">
+$ tar -vzxf gnuplot-5.0.3.tar.gz
+</code></pre>
 
 <p>Entrar no diretório descompactado:</p>
 
-<pre class="terminal">
-  $ cd gnuplot-5.0.3
-</pre>
+<pre><code class="shell terminal">
+$ cd gnuplot-5.0.3
+</code></pre>
 
 Agora vamos para a instalação propriamente dita. Entre com os comandos abaixo:
 
-<pre class="terminal">
-  $ ./configure
-</pre>
+<pre><code class="shell terminal">
+$ ./configure
+</code></pre>
 
-<pre class="terminal">
-  $ sudo make install
-</pre>
+<pre><code class="shell terminal">
+$ sudo make install
+</code></pre>
 
 Se não houver problemas durante esse processo, a instalação será concluída com sucesso. Para verificar se o software está funcionando, vamos fazer uma espécie de <em>"Hello Word"</em>, ou seja, vamos plotar uma gráfico simples.
 
 Para entrar no Gnuplot vá ao terminal e faça:
 
-<pre class="terminal">
-  $ gnuplot
-</pre>
+<pre><code class="shell terminal">
+$ gnuplot
+</code></pre>
 
 Com o Gnuplot aberto no terminal, vamos plotar o gráfico de sen(x):
 
-<pre class="terminal">
-  gnuplot> plot sin(x)
-</pre>
+<pre><code class="shell terminal">
+gnuplot> plot sin(x)
+</code></pre>
 
 Com isso, uma janela deverá ser aberta com o gráfico da função como na figura abaixo.
 
