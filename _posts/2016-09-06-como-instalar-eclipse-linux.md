@@ -17,44 +17,33 @@ A primeira coisa a ser feita é o [download do Eclipse](https://eclipse.org/down
 
 Dado que o dowload foi feito no diretório <em>"/home/user/Downloads"</em>, execute no terminal:
 
-<pre><code class="shell terminal">
-$ cd Downloads
-$ tar -vzxf eclipse*
-$ sudo chmod 777 /opt
-$ sudo mv eclipse /opt
-</code></pre>
+<pre class="terminal">
+  $ cd Downloads
+  $ tar -vzxf eclipse*
+  $ sudo chmod 777 /opt
+  $ sudo mv eclipse /opt
+</pre>
 
 Feito isso, agora vamos criar uma entrada de desktop (atalho) para o Eclipse. No terminal faça:
 
-<pre><code class="shell terminal">
-$ cd /usr/share/applications
-$ sudo gedit eclipse.desktop
-</code></pre>
+<pre class="terminal">
+  $ cd /usr/share/applications
+  $ sudo gedit eclipse.desktop
+</pre>
 
 Uma janela do gedit será aberta, entre com o conteúdo a seguir, salve o arquivo e feche o editor.
 
-<pre><code class="plaintext">
-[Desktop Entry]
-Name=Eclipse
-Type=Application
-Exec=/opt/eclipse/eclipse
-Terminal=false
-Icon=/opt/eclipse/icon.xpm
-Comment=Integrated Development Environment
-NoDisplay=false
-Categories=Development;IDE
-Name[en]=Eclipse
-</code></pre>
+<script src="https://gist.github.com/ramonsantos/a032f9938705be19b42ee8f3c334614b.js"></script>
 
 Por fim, vamos criar um link simbólico.
 
-<pre><code class="shell terminal">
-$ cd /usr/local/bin
-$ sudo ln -s /opt/eclipse/eclipse
-</code></pre>
+<pre class="terminal">
+  $ cd /usr/local/bin
+  $ sudo ln -s /opt/eclipse/eclipse
+</pre>
 
 Se tudo ocorreu bem, basta acessar o Eclipse através do ícone no lançador de seu ambiente gráfico, no meu caso é o gnome, ou pelo terminal:
 
-<pre><code class="shell terminal">
-$ eclipse
-</code></pre>
+<pre class="terminal">
+  $ eclipse
+</pre>
