@@ -1,98 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt_BR"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://ramonsantos.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ramonsantos.github.io/" rel="alternate" type="text/html" hreflang="pt_BR" /><updated>2021-01-30T20:52:28+00:00</updated><id>https://ramonsantos.github.io/feed.xml</id><title type="html">Ramon Santos</title><subtitle>Blog sobre desenvolvimento</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;ramonsantos_dev&quot;, &quot;picture&quot;=&gt;&quot;/ramon-santos.png&quot;}</name></author><entry><title type="html">Como criar chave SSH no Linux</title><link href="https://ramonsantos.github.io/blog/como-criar-chave-ssh-linux/" rel="alternate" type="text/html" title="Como criar chave SSH no Linux" /><published>2016-10-29T23:35:49+00:00</published><updated>2016-10-29T23:35:49+00:00</updated><id>https://ramonsantos.github.io/blog/como-criar-chave-ssh-linux</id><content type="html" xml:base="https://ramonsantos.github.io/blog/como-criar-chave-ssh-linux/">&lt;p&gt;Olá, pessoal!&lt;/p&gt;
-
-&lt;p&gt;Hoje eu vou mostrar como gerar uma chave SSH (SSH key).&lt;/p&gt;
-
-&lt;p&gt;A primeira coisa a fazer é verificar se já existe uma chave SSH no sistema. Em geral, essas chaves ficam do diretório oculto “/home/USER/.ssh”, então execute o comando abaixo:&lt;/p&gt;
-
-&lt;pre class=&quot;terminal&quot;&gt;
-  $ ls ~/.ssh
-&lt;/pre&gt;
-
-&lt;p&gt;Dado que o esse diretório está vazio, podemos gerar a chave com o seguinte comando:&lt;/p&gt;
-
-&lt;pre class=&quot;terminal&quot;&gt;
-  $ ssh-keygen -t rsa -b 4096 -C &quot;seu.email@dominio.com&quot;
-&lt;/pre&gt;
-
-&lt;p&gt;Quanto a mensagem abaixo for exibida no terminal, pressione a tecla “Enter” para deixar a chave no diretório padrão.&lt;/p&gt;
-
-&lt;pre class=&quot;terminal&quot;&gt;
-    Enter a file in which to save the key (/Users/you/.ssh/id_rsa):
-&lt;/pre&gt;
-
-&lt;p&gt;Logo depois será requisitado uma “passphrase”.&lt;/p&gt;
-
-&lt;pre class=&quot;terminal&quot;&gt;
-    Enter passphrase (empty for no passphrase):
-    Enter same passphrase again:
-&lt;/pre&gt;
-
-&lt;p&gt;O processo será concluído e no terminal irá aparecer algo parecido com isso:&lt;/p&gt;
-
-&lt;pre class=&quot;terminal&quot;&gt;
-    SHA256: kjerwerJGwfwef515151IGUYFIvjhbbyudwu456yfbJ seu.email@dominio.com
-    The key's randomart image is:
-    +---[RSA 4096]----+
-    |       +*..+*    |
-    |      =. +.=     |
-    |     . . .o .    |
-    |         o+   E  |
-    |        S= . + o |
-    |        . o o +  |
-    |           .   . |
-    |                 |
-    |                 |
-    +----[SHA256]-----+
-&lt;/pre&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;ramonsantos_dev&quot;, &quot;picture&quot;=&gt;&quot;/ramon-santos.png&quot;}</name></author><category term="Linux" /><category term="Git" /><category term="Github" /><summary type="html">Olá, pessoal!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ramonsantos.github.io/ramon-santos.png" /><media:content medium="image" url="https://ramonsantos.github.io/ramon-santos.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Como instalar o Eclipse no Linux</title><link href="https://ramonsantos.github.io/blog/como-instalar-eclipse-linux/" rel="alternate" type="text/html" title="Como instalar o Eclipse no Linux" /><published>2016-09-07T00:54:37+00:00</published><updated>2016-09-07T00:54:37+00:00</updated><id>https://ramonsantos.github.io/blog/como-instalar-eclipse-linux</id><content type="html" xml:base="https://ramonsantos.github.io/blog/como-instalar-eclipse-linux/">&lt;p&gt;O &lt;strong&gt;&lt;a href=&quot;https://eclipse.org/&quot;&gt;Eclipse&lt;/a&gt;&lt;/strong&gt; é uma excelente ferramenta, &lt;a href=&quot;https://github.com/eclipse&quot;&gt;open source&lt;/a&gt;, para desenvolvimento de aplicações em &lt;strong&gt;Java&lt;/strong&gt; e em outras linguagens. Neste artigo, será abordado a instalação desta ferramenta em sistemas &lt;strong&gt;Linux&lt;/strong&gt;. O único pré-requisito para ter o Eclipse em sua máquina, é ter o &lt;a href=&quot;https://ramonsantos.github.io/blog/como-instalar-java-fedora/&quot;&gt;JDK instalado&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt_BR"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://ramonsantos.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ramonsantos.github.io/" rel="alternate" type="text/html" hreflang="pt_BR" /><updated>2021-01-31T03:08:56+00:00</updated><id>https://ramonsantos.github.io/feed.xml</id><title type="html">Ramon Santos</title><subtitle>Blog sobre desenvolvimento</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;ramonsantos_dev&quot;, &quot;picture&quot;=&gt;&quot;/ramon-santos.png&quot;}</name></author><entry><title type="html">Como instalar o Eclipse no Linux</title><link href="https://ramonsantos.github.io/blog/como-instalar-eclipse-linux/" rel="alternate" type="text/html" title="Como instalar o Eclipse no Linux" /><published>2016-09-07T00:54:37+00:00</published><updated>2016-09-07T00:54:37+00:00</updated><id>https://ramonsantos.github.io/blog/como-instalar-eclipse-linux</id><content type="html" xml:base="https://ramonsantos.github.io/blog/como-instalar-eclipse-linux/">&lt;p&gt;O &lt;strong&gt;&lt;a href=&quot;https://eclipse.org/&quot;&gt;Eclipse&lt;/a&gt;&lt;/strong&gt; é uma excelente ferramenta, &lt;a href=&quot;https://github.com/eclipse&quot;&gt;open source&lt;/a&gt;, para desenvolvimento de aplicações em &lt;strong&gt;Java&lt;/strong&gt; e em outras linguagens. Neste artigo, será abordado a instalação desta ferramenta em sistemas &lt;strong&gt;Linux&lt;/strong&gt;. O único pré-requisito para ter o Eclipse em sua máquina, é ter o &lt;a href=&quot;https://ramonsantos.github.io/blog/como-instalar-java-fedora/&quot;&gt;JDK instalado&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;A primeira coisa a ser feita é o &lt;a href=&quot;https://eclipse.org/downloads/&quot;&gt;download do Eclipse&lt;/a&gt;, sendo que a versão mais recente é o &lt;a href=&quot;https://projects.eclipse.org/releases/neon&quot;&gt;Eclipse Neon&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Dado que o dowload foi feito no diretório &lt;em&gt;“/home/user/Downloads”&lt;/em&gt;, execute no terminal:&lt;/p&gt;
 
-&lt;pre class=&quot;terminal&quot;&gt;
-  $ cd Downloads
-  $ tar -vzxf eclipse*
-  $ sudo chmod 777 /opt
-  $ sudo mv eclipse /opt
-&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;shell terminal&quot;&gt;
+$ cd Downloads
+$ tar -vzxf eclipse*
+$ sudo chmod 777 /opt
+$ sudo mv eclipse /opt
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Feito isso, agora vamos criar uma entrada de desktop (atalho) para o Eclipse. No terminal faça:&lt;/p&gt;
 
-&lt;pre class=&quot;terminal&quot;&gt;
-  $ cd /usr/share/applications
-  $ sudo gedit eclipse.desktop
-&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;shell terminal&quot;&gt;
+$ cd /usr/share/applications
+$ sudo gedit eclipse.desktop
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Uma janela do gedit será aberta, entre com o conteúdo a seguir, salve o arquivo e feche o editor.&lt;/p&gt;
 
-&lt;script src=&quot;https://gist.github.com/ramonsantos/a032f9938705be19b42ee8f3c334614b.js&quot;&gt;&lt;/script&gt;
+&lt;pre&gt;&lt;code class=&quot;plaintext&quot;&gt;
+[Desktop Entry]
+Name=Eclipse
+Type=Application
+Exec=/opt/eclipse/eclipse
+Terminal=false
+Icon=/opt/eclipse/icon.xpm
+Comment=Integrated Development Environment
+NoDisplay=false
+Categories=Development;IDE
+Name[en]=Eclipse
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Por fim, vamos criar um link simbólico.&lt;/p&gt;
 
-&lt;pre class=&quot;terminal&quot;&gt;
-  $ cd /usr/local/bin
-  $ sudo ln -s /opt/eclipse/eclipse
-&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;shell terminal&quot;&gt;
+$ cd /usr/local/bin
+$ sudo ln -s /opt/eclipse/eclipse
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Se tudo ocorreu bem, basta acessar o Eclipse através do ícone no lançador de seu ambiente gráfico, no meu caso é o gnome, ou pelo terminal:&lt;/p&gt;
 
-&lt;pre class=&quot;terminal&quot;&gt;
-  $ eclipse
-&lt;/pre&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;ramonsantos_dev&quot;, &quot;picture&quot;=&gt;&quot;/ramon-santos.png&quot;}</name></author><category term="Ferramentas" /><category term="Ferramentas de Desenvolvimento" /><category term="Java" /><summary type="html">O Eclipse é uma excelente ferramenta, open source, para desenvolvimento de aplicações em Java e em outras linguagens. Neste artigo, será abordado a instalação desta ferramenta em sistemas Linux. O único pré-requisito para ter o Eclipse em sua máquina, é ter o JDK instalado.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ramonsantos.github.io/images/como-instalar-eclipse-linux/eclipse.png" /><media:content medium="image" url="https://ramonsantos.github.io/images/como-instalar-eclipse-linux/eclipse.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Como instalar o Java no Fedora</title><link href="https://ramonsantos.github.io/blog/como-instalar-java-fedora/" rel="alternate" type="text/html" title="Como instalar o Java no Fedora" /><published>2016-09-05T22:10:58+00:00</published><updated>2016-09-05T22:10:58+00:00</updated><id>https://ramonsantos.github.io/blog/como-instalar-java-fedora</id><content type="html" xml:base="https://ramonsantos.github.io/blog/como-instalar-java-fedora/">&lt;p&gt;O objetivo deste post é mostrar &lt;strong&gt;como instalar o JDK no Fedora&lt;/strong&gt;, no entanto, este artigo pode servir para outras distribuições da família &lt;strong&gt;Red Hat&lt;/strong&gt;, como é o caso de &lt;strong&gt;&lt;a href=&quot;https://www.centos.org/&quot;&gt;CentOS&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;shell terminal&quot;&gt;
+$ eclipse
+&lt;/code&gt;&lt;/pre&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;ramonsantos_dev&quot;, &quot;picture&quot;=&gt;&quot;/ramon-santos.png&quot;}</name></author><category term="Ferramentas" /><category term="Ferramentas de Desenvolvimento" /><category term="Java" /><summary type="html">O Eclipse é uma excelente ferramenta, open source, para desenvolvimento de aplicações em Java e em outras linguagens. Neste artigo, será abordado a instalação desta ferramenta em sistemas Linux. O único pré-requisito para ter o Eclipse em sua máquina, é ter o JDK instalado.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ramonsantos.github.io/images/como-instalar-eclipse-linux/eclipse.png" /><media:content medium="image" url="https://ramonsantos.github.io/images/como-instalar-eclipse-linux/eclipse.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Como instalar o Java no Fedora</title><link href="https://ramonsantos.github.io/blog/como-instalar-java-fedora/" rel="alternate" type="text/html" title="Como instalar o Java no Fedora" /><published>2016-09-05T22:10:58+00:00</published><updated>2016-09-05T22:10:58+00:00</updated><id>https://ramonsantos.github.io/blog/como-instalar-java-fedora</id><content type="html" xml:base="https://ramonsantos.github.io/blog/como-instalar-java-fedora/">&lt;p&gt;O objetivo deste post é mostrar &lt;strong&gt;como instalar o JDK no Fedora&lt;/strong&gt;, no entanto, este artigo pode servir para outras distribuições da família &lt;strong&gt;Red Hat&lt;/strong&gt;, como é o caso de &lt;strong&gt;&lt;a href=&quot;https://www.centos.org/&quot;&gt;CentOS&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Primeiramente é preciso fazer o &lt;a href=&quot;http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html&quot;&gt;download do pacote RPM do JDK através do site oficial&lt;/a&gt;. A versão mais atual do JDK neste momento é a 1.8.101. Desta forma, escolha o pacote referente à arquitetura de sua máquina (32 bits ou 64 bits).&lt;/p&gt;
 
 &lt;p&gt;Supondo que o download do pacote de instalação foi feito no o diretório &lt;em&gt;“/home/user/Downloads”&lt;/em&gt; e o arquivo chama-se “jdk-8u101-linux-x64.rpm”, entre com os seguintes comandos no terminal:&lt;/p&gt;
 
-&lt;pre class=&quot;terminal&quot;&gt;
-  $ cd Downloads
-  $ sudo rpm -Uvh jdk-8u101-linux-x64.rpm
-  $ sudo alternatives --install /usr/bin/java java /usr/java/latest/jre/bin/java 200000
-&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;shell terminal&quot;&gt;
+$ cd Downloads
+$ sudo rpm -Uvh jdk-8u101-linux-x64.rpm
+$ sudo alternatives --install /usr/bin/java java /usr/java/latest/jre/bin/java 200000
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Após a instalação é importante definir qual a versão padrão do &lt;strong&gt;JDK&lt;/strong&gt; no sistema operacional, dado que o &lt;strong&gt;Fedora&lt;/strong&gt; já vem com o &lt;strong&gt;&lt;a href=&quot;http://openjdk.java.net/&quot;&gt;OpenJDK&lt;/a&gt;&lt;/strong&gt; instalado. Para isso, entre com o comando abaixo no terminal:&lt;/p&gt;
 
-&lt;pre class=&quot;terminal&quot;&gt;
+&lt;pre&gt;&lt;code class=&quot;shell terminal&quot;&gt;
 $ sudo alternatives --config java
 
   Há 3 programas que oferecem &quot;java&quot;.
@@ -104,35 +70,41 @@ $ sudo alternatives --config java
      3           /usr/java/latest/jre/bin/java
 
   Indique para manter a seleção atual[+] ou digite o número da seleção:
-&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Neste caso, escolha a opção 2 (“/usr/java/jdk1.8.0_101/jre/bin/java”).&lt;/p&gt;
 
 &lt;p&gt;Para conferir se o JDK está instalado, digite o comando abaixo no terminal e verifique se a saída é parecida com esta:&lt;/p&gt;
 
-&lt;pre class=&quot;terminal&quot;&gt;
-  $ java -version
-    java version &quot;1.8.0_101&quot;
-    Java(TM) SE Runtime Environment (build 1.8.0_101-b13)
-    Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)
-&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;shell terminal&quot;&gt;
+$ java -version
+  java version &quot;1.8.0_101&quot;
+  Java(TM) SE Runtime Environment (build 1.8.0_101-b13)
+  Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Agora vamos fazer um “&lt;em&gt;Hello Word&lt;/em&gt;” para testar se está tudo funcionando. Abra um editor de texto e entre com o código fonte abaixo:&lt;/p&gt;
 
-&lt;script src=&quot;https://gist.github.com/ramonsantos/af6cdc910d0a5dd488920a373ac07514.js&quot;&gt;&lt;/script&gt;
+&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;
+public class Main {
+    public static void main(String[] args) {
+    	System.out.println(&quot;Hello, World!&quot;);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Salve o arquivo com o nome “&lt;em&gt;Main.java&lt;/em&gt;” e entre no diretório onde este se encontra para compilá-lo:&lt;/p&gt;
 
-&lt;pre class=&quot;terminal&quot;&gt;
-  $ javac Main.java
-&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;shell terminal&quot;&gt;
+$ javac Main.java
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;O compilador do &lt;strong&gt;Java&lt;/strong&gt;, o &lt;strong&gt;javac&lt;/strong&gt;, gerará um arquivo chamado “&lt;em&gt;Main.class&lt;/em&gt;”, para rodá-lo basta entrar com:&lt;/p&gt;
 
-&lt;pre class=&quot;terminal&quot;&gt;
-  $ java Main
-    Hello, World!
-&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;shell terminal&quot;&gt;
+$ java Main
+  Hello, World!
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Após a instalação do Java, talvez você também queira instalar o &lt;a href=&quot;/blog/como-instalar-eclipse-linux/&quot;&gt;Eclipse&lt;/a&gt; ;)&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;ramonsantos_dev&quot;, &quot;picture&quot;=&gt;&quot;/ramon-santos.png&quot;}</name></author><category term="Desenvolvimento" /><category term="Fedora" /><category term="Java" /><summary type="html">O objetivo deste post é mostrar como instalar o JDK no Fedora, no entanto, este artigo pode servir para outras distribuições da família Red Hat, como é o caso de CentOS.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ramonsantos.github.io/images/como-instalar-java-fedora/java.png" /><media:content medium="image" url="https://ramonsantos.github.io/images/como-instalar-java-fedora/java.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Atom: instalação e primeiros passos</title><link href="https://ramonsantos.github.io/blog/atom-instalacao-primeiros-passos/" rel="alternate" type="text/html" title="Atom: instalação e primeiros passos" /><published>2016-08-13T17:27:19+00:00</published><updated>2016-08-13T17:27:19+00:00</updated><id>https://ramonsantos.github.io/blog/atom-instalacao-primeiros-passos</id><content type="html" xml:base="https://ramonsantos.github.io/blog/atom-instalacao-primeiros-passos/">&lt;p&gt;O Atom é um editor de texto open source muito usado por desenvolvedores. Foi inicialmente desenvolvido pelo &lt;strong&gt;GitHub&lt;/strong&gt; e seu repositório oficial &lt;a href=&quot;https://github.com/atom/atom&quot;&gt;está disponível no próprio Github&lt;/a&gt;.&lt;/p&gt;
 
@@ -144,15 +116,15 @@ $ sudo alternatives --config java
 
 &lt;h4 id=&quot;família-debian-debian-ubuntu-linux-mint-e-etc&quot;&gt;Família Debian (Debian, Ubuntu, Linux Mint e etc):&lt;/h4&gt;
 
-&lt;pre class=&quot;terminal&quot;&gt;
-  $ sudo dpkg -i atom-amd64.deb
-&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;shell terminal&quot;&gt;
+$ sudo dpkg -i atom-amd64.deb
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h4 id=&quot;família-red-hat-fedora-centos-opensuse-e-etc&quot;&gt;Família Red Hat (Fedora, CentOS, openSUSE e etc):&lt;/h4&gt;
 
-&lt;pre class=&quot;terminal&quot;&gt;
-  $ sudo rpm -Uvh atom.x86_64.rpm
-&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;shell terminal&quot;&gt;
+$ sudo rpm -Uvh atom.x86_64.rpm
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;recursos-nativos&quot;&gt;Recursos nativos&lt;/h2&gt;
 
@@ -202,45 +174,45 @@ $ sudo alternatives --config java
 
 &lt;p&gt;Entrar no diretório do download:&lt;/p&gt;
 
-&lt;pre class=&quot;terminal&quot;&gt;
-  $ cd Downloads
-&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;shell terminal&quot;&gt;
+$ cd Downloads
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Descompactar o arquivo de instalação:&lt;/p&gt;
 
-&lt;pre class=&quot;terminal&quot;&gt;
-  $ tar -vzxf gnuplot-5.0.3.tar.gz
-&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;shell terminal&quot;&gt;
+$ tar -vzxf gnuplot-5.0.3.tar.gz
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Entrar no diretório descompactado:&lt;/p&gt;
 
-&lt;pre class=&quot;terminal&quot;&gt;
-  $ cd gnuplot-5.0.3
-&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;shell terminal&quot;&gt;
+$ cd gnuplot-5.0.3
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Agora vamos para a instalação propriamente dita. Entre com os comandos abaixo:&lt;/p&gt;
 
-&lt;pre class=&quot;terminal&quot;&gt;
-  $ ./configure
-&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;shell terminal&quot;&gt;
+$ ./configure
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;pre class=&quot;terminal&quot;&gt;
-  $ sudo make install
-&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;shell terminal&quot;&gt;
+$ sudo make install
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Se não houver problemas durante esse processo, a instalação será concluída com sucesso. Para verificar se o software está funcionando, vamos fazer uma espécie de &lt;em&gt;“Hello Word”&lt;/em&gt;, ou seja, vamos plotar uma gráfico simples.&lt;/p&gt;
 
 &lt;p&gt;Para entrar no Gnuplot vá ao terminal e faça:&lt;/p&gt;
 
-&lt;pre class=&quot;terminal&quot;&gt;
-  $ gnuplot
-&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;shell terminal&quot;&gt;
+$ gnuplot
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Com o Gnuplot aberto no terminal, vamos plotar o gráfico de sen(x):&lt;/p&gt;
 
-&lt;pre class=&quot;terminal&quot;&gt;
-  gnuplot&amp;gt; plot sin(x)
-&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;shell terminal&quot;&gt;
+gnuplot&amp;gt; plot sin(x)
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Com isso, uma janela deverá ser aberta com o gráfico da função como na figura abaixo.&lt;/p&gt;
 

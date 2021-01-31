@@ -16,6 +16,9 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
 <!-- Begin Jekyll SEO tag v2.6.1 -->
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Como instalar o Gnuplot no Fedora" />
@@ -125,45 +128,45 @@
 
 <p>Entrar no diretório do download:</p>
 
-<pre class="terminal">
-  $ cd Downloads
-</pre>
+<pre><code class="shell terminal">
+$ cd Downloads
+</code></pre>
 
 <p>Descompactar o arquivo de instalação:</p>
 
-<pre class="terminal">
-  $ tar -vzxf gnuplot-5.0.3.tar.gz
-</pre>
+<pre><code class="shell terminal">
+$ tar -vzxf gnuplot-5.0.3.tar.gz
+</code></pre>
 
 <p>Entrar no diretório descompactado:</p>
 
-<pre class="terminal">
-  $ cd gnuplot-5.0.3
-</pre>
+<pre><code class="shell terminal">
+$ cd gnuplot-5.0.3
+</code></pre>
 
 <p>Agora vamos para a instalação propriamente dita. Entre com os comandos abaixo:</p>
 
-<pre class="terminal">
-  $ ./configure
-</pre>
+<pre><code class="shell terminal">
+$ ./configure
+</code></pre>
 
-<pre class="terminal">
-  $ sudo make install
-</pre>
+<pre><code class="shell terminal">
+$ sudo make install
+</code></pre>
 
 <p>Se não houver problemas durante esse processo, a instalação será concluída com sucesso. Para verificar se o software está funcionando, vamos fazer uma espécie de <em>“Hello Word”</em>, ou seja, vamos plotar uma gráfico simples.</p>
 
 <p>Para entrar no Gnuplot vá ao terminal e faça:</p>
 
-<pre class="terminal">
-  $ gnuplot
-</pre>
+<pre><code class="shell terminal">
+$ gnuplot
+</code></pre>
 
 <p>Com o Gnuplot aberto no terminal, vamos plotar o gráfico de sen(x):</p>
 
-<pre class="terminal">
-  gnuplot&gt; plot sin(x)
-</pre>
+<pre><code class="shell terminal">
+gnuplot&gt; plot sin(x)
+</code></pre>
 
 <p>Com isso, uma janela deverá ser aberta com o gráfico da função como na figura abaixo.</p>
 
@@ -230,16 +233,6 @@
             </a>
           </li>
         
-          <li>
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
-
-            <a href="/categories/linux">
-              Linux
-              <i class="fa fa-circle" aria-hidden="true"></i>
-              1
-            </a>
-          </li>
-        
       </ul>
     </div>
   
@@ -270,20 +263,6 @@
             <a href="/tags/ferramentas-de-desenvolvimento">
               <i class="fa fa-tag" aria-hidden="true"></i>
               Ferramentas de Desenvolvimento
-            </a>
-          </li>
-        
-          <li>
-            <a href="/tags/git">
-              <i class="fa fa-tag" aria-hidden="true"></i>
-              Git
-            </a>
-          </li>
-        
-          <li>
-            <a href="/tags/github">
-              <i class="fa fa-tag" aria-hidden="true"></i>
-              Github
             </a>
           </li>
         

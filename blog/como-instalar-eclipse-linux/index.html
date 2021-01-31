@@ -16,6 +16,9 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
 <!-- Begin Jekyll SEO tag v2.6.1 -->
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Como instalar o Eclipse no Linux" />
@@ -123,36 +126,47 @@
 
 <p>Dado que o dowload foi feito no diretório <em>“/home/user/Downloads”</em>, execute no terminal:</p>
 
-<pre class="terminal">
-  $ cd Downloads
-  $ tar -vzxf eclipse*
-  $ sudo chmod 777 /opt
-  $ sudo mv eclipse /opt
-</pre>
+<pre><code class="shell terminal">
+$ cd Downloads
+$ tar -vzxf eclipse*
+$ sudo chmod 777 /opt
+$ sudo mv eclipse /opt
+</code></pre>
 
 <p>Feito isso, agora vamos criar uma entrada de desktop (atalho) para o Eclipse. No terminal faça:</p>
 
-<pre class="terminal">
-  $ cd /usr/share/applications
-  $ sudo gedit eclipse.desktop
-</pre>
+<pre><code class="shell terminal">
+$ cd /usr/share/applications
+$ sudo gedit eclipse.desktop
+</code></pre>
 
 <p>Uma janela do gedit será aberta, entre com o conteúdo a seguir, salve o arquivo e feche o editor.</p>
 
-<script src="https://gist.github.com/ramonsantos/a032f9938705be19b42ee8f3c334614b.js"></script>
+<pre><code class="plaintext">
+[Desktop Entry]
+Name=Eclipse
+Type=Application
+Exec=/opt/eclipse/eclipse
+Terminal=false
+Icon=/opt/eclipse/icon.xpm
+Comment=Integrated Development Environment
+NoDisplay=false
+Categories=Development;IDE
+Name[en]=Eclipse
+</code></pre>
 
 <p>Por fim, vamos criar um link simbólico.</p>
 
-<pre class="terminal">
-  $ cd /usr/local/bin
-  $ sudo ln -s /opt/eclipse/eclipse
-</pre>
+<pre><code class="shell terminal">
+$ cd /usr/local/bin
+$ sudo ln -s /opt/eclipse/eclipse
+</code></pre>
 
 <p>Se tudo ocorreu bem, basta acessar o Eclipse através do ícone no lançador de seu ambiente gráfico, no meu caso é o gnome, ou pelo terminal:</p>
 
-<pre class="terminal">
-  $ eclipse
-</pre>
+<pre><code class="shell terminal">
+$ eclipse
+</code></pre>
 
   </div>
 <br>
@@ -211,16 +225,6 @@
             </a>
           </li>
         
-          <li>
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
-
-            <a href="/categories/linux">
-              Linux
-              <i class="fa fa-circle" aria-hidden="true"></i>
-              1
-            </a>
-          </li>
-        
       </ul>
     </div>
   
@@ -251,20 +255,6 @@
             <a href="/tags/ferramentas-de-desenvolvimento">
               <i class="fa fa-tag" aria-hidden="true"></i>
               Ferramentas de Desenvolvimento
-            </a>
-          </li>
-        
-          <li>
-            <a href="/tags/git">
-              <i class="fa fa-tag" aria-hidden="true"></i>
-              Git
-            </a>
-          </li>
-        
-          <li>
-            <a href="/tags/github">
-              <i class="fa fa-tag" aria-hidden="true"></i>
-              Github
             </a>
           </li>
         

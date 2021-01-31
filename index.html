@@ -16,6 +16,9 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
 <!-- Begin Jekyll SEO tag v2.6.1 -->
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Ramon Santos" />
@@ -85,93 +88,6 @@
   
     <article><header class="header-post">
   <h1>
-    <a href="/blog/como-criar-chave-ssh-linux/">Como criar chave SSH no Linux</a>
-  </h1>
-
-  <ul>
-    <li>
-      <i></i>
-      <i class="fa fa-calendar"></i>
-      <time datetime="2016-10-29T23:35:49+00:00">29/10/2016</time>
-    </li>
-
-    <li>
-      <i></i>
-      <i class="fa fa-archive"></i>
-      
-      <a href="/categories/linux/" title="Linux">Linux</a>
-    </li>
-
-    
-      <li>
-        <i></i>
-        <i class="fa fa-tags"></i>
-
-        
-        
-
-        
-
-        <a href="/tags/git/" title="Git">Git</a>, <a href="/tags/github/" title="Github">Github</a>
-      </li>
-    
-  </ul>
-</header>
-<div class="content-post">
-        <p>Olá, pessoal!</p>
-
-<p>Hoje eu vou mostrar como gerar uma chave SSH (SSH key).</p>
-
-<p>A primeira coisa a fazer é verificar se já existe uma chave SSH no sistema. Em geral, essas chaves ficam do diretório oculto “/home/USER/.ssh”, então execute o comando abaixo:</p>
-
-<pre class="terminal">
-  $ ls ~/.ssh
-</pre>
-
-<p>Dado que o esse diretório está vazio, podemos gerar a chave com o seguinte comando:</p>
-
-<pre class="terminal">
-  $ ssh-keygen -t rsa -b 4096 -C "seu.email@dominio.com"
-</pre>
-
-<p>Quanto a mensagem abaixo for exibida no terminal, pressione a tecla “Enter” para deixar a chave no diretório padrão.</p>
-
-<pre class="terminal">
-    Enter a file in which to save the key (/Users/you/.ssh/id_rsa):
-</pre>
-
-<p>Logo depois será requisitado uma “passphrase”.</p>
-
-<pre class="terminal">
-    Enter passphrase (empty for no passphrase):
-    Enter same passphrase again:
-</pre>
-
-<p>O processo será concluído e no terminal irá aparecer algo parecido com isso:</p>
-
-<pre class="terminal">
-    SHA256: kjerwerJGwfwef515151IGUYFIvjhbbyudwu456yfbJ seu.email@dominio.com
-    The key's randomart image is:
-    +---[RSA 4096]----+
-    |       +*..+*    |
-    |      =. +.=     |
-    |     . . .o .    |
-    |         o+   E  |
-    |        S= . + o |
-    |        . o o +  |
-    |           .   . |
-    |                 |
-    |                 |
-    +----[SHA256]-----+
-</pre>
-
-      </div>
-    </article>
-
-    <hr class="post-separator">
-  
-    <article><header class="header-post">
-  <h1>
     <a href="/blog/como-instalar-eclipse-linux/">Como instalar o Eclipse no Linux</a>
   </h1>
 
@@ -211,36 +127,47 @@
 
 <p>Dado que o dowload foi feito no diretório <em>“/home/user/Downloads”</em>, execute no terminal:</p>
 
-<pre class="terminal">
-  $ cd Downloads
-  $ tar -vzxf eclipse*
-  $ sudo chmod 777 /opt
-  $ sudo mv eclipse /opt
-</pre>
+<pre><code class="shell terminal">
+$ cd Downloads
+$ tar -vzxf eclipse*
+$ sudo chmod 777 /opt
+$ sudo mv eclipse /opt
+</code></pre>
 
 <p>Feito isso, agora vamos criar uma entrada de desktop (atalho) para o Eclipse. No terminal faça:</p>
 
-<pre class="terminal">
-  $ cd /usr/share/applications
-  $ sudo gedit eclipse.desktop
-</pre>
+<pre><code class="shell terminal">
+$ cd /usr/share/applications
+$ sudo gedit eclipse.desktop
+</code></pre>
 
 <p>Uma janela do gedit será aberta, entre com o conteúdo a seguir, salve o arquivo e feche o editor.</p>
 
-<script src="https://gist.github.com/ramonsantos/a032f9938705be19b42ee8f3c334614b.js"></script>
+<pre><code class="plaintext">
+[Desktop Entry]
+Name=Eclipse
+Type=Application
+Exec=/opt/eclipse/eclipse
+Terminal=false
+Icon=/opt/eclipse/icon.xpm
+Comment=Integrated Development Environment
+NoDisplay=false
+Categories=Development;IDE
+Name[en]=Eclipse
+</code></pre>
 
 <p>Por fim, vamos criar um link simbólico.</p>
 
-<pre class="terminal">
-  $ cd /usr/local/bin
-  $ sudo ln -s /opt/eclipse/eclipse
-</pre>
+<pre><code class="shell terminal">
+$ cd /usr/local/bin
+$ sudo ln -s /opt/eclipse/eclipse
+</code></pre>
 
 <p>Se tudo ocorreu bem, basta acessar o Eclipse através do ícone no lançador de seu ambiente gráfico, no meu caso é o gnome, ou pelo terminal:</p>
 
-<pre class="terminal">
-  $ eclipse
-</pre>
+<pre><code class="shell terminal">
+$ eclipse
+</code></pre>
 
       </div>
     </article>
@@ -288,15 +215,15 @@
 
 <p>Supondo que o download do pacote de instalação foi feito no o diretório <em>“/home/user/Downloads”</em> e o arquivo chama-se “jdk-8u101-linux-x64.rpm”, entre com os seguintes comandos no terminal:</p>
 
-<pre class="terminal">
-  $ cd Downloads
-  $ sudo rpm -Uvh jdk-8u101-linux-x64.rpm
-  $ sudo alternatives --install /usr/bin/java java /usr/java/latest/jre/bin/java 200000
-</pre>
+<pre><code class="shell terminal">
+$ cd Downloads
+$ sudo rpm -Uvh jdk-8u101-linux-x64.rpm
+$ sudo alternatives --install /usr/bin/java java /usr/java/latest/jre/bin/java 200000
+</code></pre>
 
 <p>Após a instalação é importante definir qual a versão padrão do <strong>JDK</strong> no sistema operacional, dado que o <strong>Fedora</strong> já vem com o <strong><a href="http://openjdk.java.net/">OpenJDK</a></strong> instalado. Para isso, entre com o comando abaixo no terminal:</p>
 
-<pre class="terminal">
+<pre><code class="shell terminal">
 $ sudo alternatives --config java
 
   Há 3 programas que oferecem "java".
@@ -308,37 +235,146 @@ $ sudo alternatives --config java
      3           /usr/java/latest/jre/bin/java
 
   Indique para manter a seleção atual[+] ou digite o número da seleção:
-</pre>
+</code></pre>
 
 <p>Neste caso, escolha a opção 2 (“/usr/java/jdk1.8.0_101/jre/bin/java”).</p>
 
 <p>Para conferir se o JDK está instalado, digite o comando abaixo no terminal e verifique se a saída é parecida com esta:</p>
 
-<pre class="terminal">
-  $ java -version
-    java version "1.8.0_101"
-    Java(TM) SE Runtime Environment (build 1.8.0_101-b13)
-    Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)
-</pre>
+<pre><code class="shell terminal">
+$ java -version
+  java version "1.8.0_101"
+  Java(TM) SE Runtime Environment (build 1.8.0_101-b13)
+  Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)
+</code></pre>
 
 <p>Agora vamos fazer um “<em>Hello Word</em>” para testar se está tudo funcionando. Abra um editor de texto e entre com o código fonte abaixo:</p>
 
-<script src="https://gist.github.com/ramonsantos/af6cdc910d0a5dd488920a373ac07514.js"></script>
+<pre><code class="java">
+public class Main {
+    public static void main(String[] args) {
+    	System.out.println("Hello, World!");
+    }
+}
+</code></pre>
 
 <p>Salve o arquivo com o nome “<em>Main.java</em>” e entre no diretório onde este se encontra para compilá-lo:</p>
 
-<pre class="terminal">
-  $ javac Main.java
-</pre>
+<pre><code class="shell terminal">
+$ javac Main.java
+</code></pre>
 
 <p>O compilador do <strong>Java</strong>, o <strong>javac</strong>, gerará um arquivo chamado “<em>Main.class</em>”, para rodá-lo basta entrar com:</p>
 
-<pre class="terminal">
-  $ java Main
-    Hello, World!
-</pre>
+<pre><code class="shell terminal">
+$ java Main
+  Hello, World!
+</code></pre>
 
 <p>Após a instalação do Java, talvez você também queira instalar o <a href="/blog/como-instalar-eclipse-linux/">Eclipse</a> ;)</p>
+
+      </div>
+    </article>
+
+    <hr class="post-separator">
+  
+    <article><header class="header-post">
+  <h1>
+    <a href="/blog/atom-instalacao-primeiros-passos/">Atom: instalação e primeiros passos</a>
+  </h1>
+
+  <ul>
+    <li>
+      <i></i>
+      <i class="fa fa-calendar"></i>
+      <time datetime="2016-08-13T17:27:19+00:00">13/08/2016</time>
+    </li>
+
+    <li>
+      <i></i>
+      <i class="fa fa-archive"></i>
+      
+      <a href="/categories/ferramentas/" title="Ferramentas">Ferramentas</a>
+    </li>
+
+    
+      <li>
+        <i></i>
+        <i class="fa fa-tags"></i>
+
+        
+        
+
+        
+
+        <a href="/tags/ferramentas-de-desenvolvimento/" title="Ferramentas de Desenvolvimento">Ferramentas de Desenvolvimento</a>
+      </li>
+    
+  </ul>
+</header>
+<div class="content-post">
+        <p>O Atom é um editor de texto open source muito usado por desenvolvedores. Foi inicialmente desenvolvido pelo <strong>GitHub</strong> e seu repositório oficial <a href="https://github.com/atom/atom">está disponível no próprio Github</a>.</p>
+
+<h2 id="instalação">Instalação</h2>
+
+<p>Uma das características deste editor é que ele é multiplataforma. Para <strong>Linux</strong>, o Atom é <a href="https://atom.io/" title="Site oficial do Atom" target="_blank">disponibilizado</a> em pacotes <em>.deb</em> e <em>.rpm</em>, além da possibilidade de instalação a partir dos fontes e contando com um excelente <a href="https://github.com/atom/atom/blob/master/docs/build-instructions/linux.md" target="_blank">tutorial</a>.</p>
+
+<p>Com o pacote de sua distribuição baixado, basta entrar no diretório onde o mesmo se encontra e executar um dos comando abaixo de acordo com sua distro.</p>
+
+<h4 id="família-debian-debian-ubuntu-linux-mint-e-etc">Família Debian (Debian, Ubuntu, Linux Mint e etc):</h4>
+
+<pre><code class="shell terminal">
+$ sudo dpkg -i atom-amd64.deb
+</code></pre>
+
+<h4 id="família-red-hat-fedora-centos-opensuse-e-etc">Família Red Hat (Fedora, CentOS, openSUSE e etc):</h4>
+
+<pre><code class="shell terminal">
+$ sudo rpm -Uvh atom.x86_64.rpm
+</code></pre>
+
+<h2 id="recursos-nativos">Recursos nativos</h2>
+
+<p>Por padrão, o Atom já vem como vários recursos uteis, entre eles temos:</p>
+
+<ul>
+  <li><em>Integração com o Github</em>;</li>
+  <li><em>Gerenciador de pacotes</em>;</li>
+  <li><em>Syntax highlight</em>;</li>
+  <li><em>Live preview para arquivos Markdown</em>;</li>
+  <li><em>Divisão de Painéis (Split)</em>;</li>
+  <li><em>Tree view para diretórios e arquivos</em>.</li>
+</ul>
+
+<div style="text-align: center"><a href="/images/atom-instalacao-primeiros-passos/atom-live-preview-md.png" target="_blank"><figure><img src="/images/atom-instalacao-primeiros-passos/atom-live-preview-md.png" style="max-width: 100%" alt="Live Preview para Markdown" title="Live Preview para Markdown" /><figcaption class="text-center">Live Preview para Markdown.</figcaption></figure></a></div>
+
+<div style="text-align: center"><a href="/images/atom-instalacao-primeiros-passos/atom-split.png" target="_blank"><figure><img src="/images/atom-instalacao-primeiros-passos/atom-split.png" style="max-width: 100%" alt="Divisões de Painéis (Split)" title="Divisões de Painéis (Split)" /><figcaption class="text-center">Divisões de Painéis (Split).</figcaption></figure></a></div>
+
+<h2 id="personalizando-o-atom">Personalizando o Atom</h2>
+
+<p>Agora vamos para a melhor parte, os pacote. Como mencionado acima, o gerenciador do pacotes já vem ativado por padrão, para acessá-lo entre no menu <em>Edit</em> &gt; <em>Preferences</em>, vai aparecer a aba “<em>Settings</em>”.</p>
+
+<p>Na aba “Settings” podemos definir teclas de atalhos (Keybindings), configuração gerais (Settings), instalar (install) e atualizar (updates) pacotes e temas, gerenciar pacotes instalados (Packages) e escolher o visual da aplicação (Themes).</p>
+
+<p>Para ilustrar o potencial de personalização do atom, vamos deixá-lo parecido com o <strong>Sublime Text</strong>. Duas características são icônicas no Sublime Text: o tema “<strong>monokai</strong>” e o “<strong>minimap</strong>”.</p>
+
+<h3 id="instalando-um-tema">Instalando um tema</h3>
+
+<p>Para instalar o tema vá em “<em>Install</em>”, digite “<em>monokai</em>” e click em “<em>Themes</em>”. Entre as opções escolha “<em>monokai</em>” do usuário “<em>kevinsawicki</em>” e click em “<em>Install</em>”.</p>
+
+<p>Depois de instalação, vá em “<em>Themes</em>” para configurar o tema. Em “<em>UI Theme</em>” escolha “<em>Atom Light</em>” e em “<em>Syntax Theme</em>” escolha “<em>Monokai</em>”.</p>
+
+<h3 id="instalando-um-pacote">Instalando um pacote</h3>
+
+<p>Para instalar um pacote o procedimento é similar, vá em “<em>Install</em>”, digite “<em>minimap</em>” e precione “<em>enter</em>” ou click em “<em>Packages</em>”. Escolha o pacote “<em>minimap</em>” do usuário “<em>atom-minimap</em>” e click em “<em>Install</em>”.</p>
+
+<p>Geralmente os pacotes são ativados logo após serem instalados, para conferir vá em “<em>Packages</em>” e veja se o pacote está ativo, caso não esteja click em “<em>Enable</em>”.</p>
+
+<div style="text-align: center"><a href="/images/atom-instalacao-primeiros-passos/atom-monokai-theme.png" target="_blank"><figure><img src="/images/atom-instalacao-primeiros-passos/atom-monokai-theme.png" style="max-width: 100%" alt="Visual do Atom depois da personalização" title="Visual do Atom depois da personalização" /><figcaption class="text-center">Visual do Atom depois da personalização.</figcaption></figure></a>
+</div>
+
+<p>A aparencia do Atom ficará como na figura acima.</p>
+
 
       </div>
     </article>
@@ -396,16 +432,6 @@ $ sudo alternatives --config java
             </a>
           </li>
         
-          <li>
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
-
-            <a href="/categories/linux">
-              Linux
-              <i class="fa fa-circle" aria-hidden="true"></i>
-              1
-            </a>
-          </li>
-        
       </ul>
     </div>
   
@@ -436,20 +462,6 @@ $ sudo alternatives --config java
             <a href="/tags/ferramentas-de-desenvolvimento">
               <i class="fa fa-tag" aria-hidden="true"></i>
               Ferramentas de Desenvolvimento
-            </a>
-          </li>
-        
-          <li>
-            <a href="/tags/git">
-              <i class="fa fa-tag" aria-hidden="true"></i>
-              Git
-            </a>
-          </li>
-        
-          <li>
-            <a href="/tags/github">
-              <i class="fa fa-tag" aria-hidden="true"></i>
-              Github
             </a>
           </li>
         
