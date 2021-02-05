@@ -4,3 +4,8 @@ _site
 .jekyll-metadata
 vendor
 
+# Theme symbolic links
+_includes
+_layouts
+_sass
+assets
