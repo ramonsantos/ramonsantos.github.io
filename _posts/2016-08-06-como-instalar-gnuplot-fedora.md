@@ -2,10 +2,11 @@
 layout: post
 title: Como instalar o Gnuplot no Fedora
 date: 2016-08-06 14:42:50 -0300
+categories: Ferramentas
 tags:
   - Fedora
   - Ferramentas Acadêmicas
-categories: Ferramentas
+  - Linux
 description: Instalação do Gnuplot no fedora.
 image:
   path: "/images/como-instalar-gnuplot-fedora/gnuplot-sin-x.png"
@@ -15,7 +16,7 @@ Vamos ver como instalar o **Gnuplot** no **Fedora**. Para quem não conhece, [Gn
 
 O Gnuplot não é disponibilizado por padrão nos repositórios oficiais do Fedora, desta forma, é necessário [fazer o download do software manualmente](https://sourceforge.net/projects/gnuplot/files/gnuplot/).
 
-Depois de fazer o download devemos abrir o terminal, entrar no diretório onde está o arquivo e descompactá-lo. Supondo que o nome do arquivo é <em>"gnuplot-5.0.3.tar.gz"</em> e está em <em>"/home/user/Downloads"</em>, entre com os comandos abaixo no terminal.
+Depois de fazer o download devemos abrir o terminal, entrar no diretório onde está o arquivo e descompactá-lo. Supondo que o nome do arquivo é ```gnuplot-5.0.3.tar.gz``` e está em ```/home/user/Downloads```, entre com os comandos abaixo no terminal.
 
 Entrar no diretório do download:
 
@@ -45,7 +46,7 @@ $ ./configure
 $ sudo make install
 </code></pre>
 
-Se não houver problemas durante esse processo, a instalação será concluída com sucesso. Para verificar se o software está funcionando, vamos fazer uma espécie de <em>"Hello Word"</em>, ou seja, vamos plotar uma gráfico simples.
+Se não houver problemas durante esse processo, a instalação será concluída com sucesso. Para verificar se o software está funcionando, vamos fazer uma espécie de *Hello Word*, ou seja, vamos plotar uma gráfico simples.
 
 Para entrar no Gnuplot vá ao terminal e faça:
 
@@ -53,7 +54,7 @@ Para entrar no Gnuplot vá ao terminal e faça:
 $ gnuplot
 </code></pre>
 
-Com o Gnuplot aberto no terminal, vamos plotar o gráfico de sen(x):
+Com o Gnuplot aberto no terminal, vamos plotar o gráfico de *sen(x)*:
 
 <pre><code class="shell terminal">
 gnuplot> plot sin(x)
