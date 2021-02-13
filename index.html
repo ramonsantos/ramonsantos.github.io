@@ -38,7 +38,7 @@
 <meta property="fb:admins" content="CjHweHcsUQm" />
 <meta property="fb:app_id" content="122740845026539" />
 <script type="application/ld+json">
-{"url":"https://ramonsantos.github.io/","@type":"WebSite","image":"https://ramonsantos.github.io/ramon-santos.png","headline":"Ramon Santos","name":"Ramon Santos","description":"Blog sobre desenvolvimento","@context":"https://schema.org"}</script>
+{"url":"https://ramonsantos.github.io/","@type":"WebSite","headline":"Ramon Santos","image":"https://ramonsantos.github.io/ramon-santos.png","name":"Ramon Santos","description":"Blog sobre desenvolvimento","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -115,7 +115,7 @@
 
         
 
-        <a href="/tags/ferramentas-de-desenvolvimento/" title="Ferramentas de Desenvolvimento">Ferramentas de Desenvolvimento</a>, <a href="/tags/java/" title="Java">Java</a>
+        <a href="/tags/ferramentas-de-desenvolvimento/" title="Ferramentas de Desenvolvimento">Ferramentas de Desenvolvimento</a>, <a href="/tags/java/" title="Java">Java</a>, <a href="/tags/linux/" title="Linux">Linux</a>
       </li>
     
   </ul>
@@ -125,7 +125,7 @@
 
 <p>A primeira coisa a ser feita é o <a href="https://eclipse.org/downloads/">download do Eclipse</a>, sendo que a versão mais recente é o <a href="https://projects.eclipse.org/releases/neon">Eclipse Neon</a>.</p>
 
-<p>Dado que o dowload foi feito no diretório <em>“/home/user/Downloads”</em>, execute no terminal:</p>
+<p>Dado que o dowload foi feito no diretório <code class="language-plaintext highlighter-rouge">/home/user/Downloads</code>, execute no terminal:</p>
 
 <pre><code class="shell terminal">
 $ cd Downloads
@@ -190,7 +190,7 @@ $ eclipse
       <i></i>
       <i class="fa fa-archive"></i>
       
-      <a href="/categories/desenvolvimento/" title="Desenvolvimento">Desenvolvimento</a>
+      <a href="/categories/ferramentas/" title="Ferramentas">Ferramentas</a>
     </li>
 
     
@@ -203,7 +203,7 @@ $ eclipse
 
         
 
-        <a href="/tags/fedora/" title="Fedora">Fedora</a>, <a href="/tags/java/" title="Java">Java</a>
+        <a href="/tags/fedora/" title="Fedora">Fedora</a>, <a href="/tags/java/" title="Java">Java</a>, <a href="/tags/linux/" title="Linux">Linux</a>
       </li>
     
   </ul>
@@ -211,9 +211,9 @@ $ eclipse
 <div class="content-post">
         <p>O objetivo deste post é mostrar <strong>como instalar o JDK no Fedora</strong>, no entanto, este artigo pode servir para outras distribuições da família <strong>Red Hat</strong>, como é o caso de <strong><a href="https://www.centos.org/">CentOS</a></strong>.</p>
 
-<p>Primeiramente é preciso fazer o <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">download do pacote RPM do JDK através do site oficial</a>. A versão mais atual do JDK neste momento é a 1.8.101. Desta forma, escolha o pacote referente à arquitetura de sua máquina (32 bits ou 64 bits).</p>
+<p>Primeiramente é preciso fazer o <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">download do pacote RPM do JDK através do site oficial</a>. A versão mais atual do JDK neste momento é a <code class="language-plaintext highlighter-rouge">1.8.101</code>. Desta forma, escolha o pacote referente à arquitetura de sua máquina (32 bits ou 64 bits).</p>
 
-<p>Supondo que o download do pacote de instalação foi feito no o diretório <em>“/home/user/Downloads”</em> e o arquivo chama-se “jdk-8u101-linux-x64.rpm”, entre com os seguintes comandos no terminal:</p>
+<p>Supondo que o download do pacote de instalação foi feito no o diretório <code class="language-plaintext highlighter-rouge">/home/user/Downloads</code> e o arquivo chama-se <code class="language-plaintext highlighter-rouge">jdk-8u101-linux-x64.rpm</code>, entre com os seguintes comandos no terminal:</p>
 
 <pre><code class="shell terminal">
 $ cd Downloads
@@ -237,7 +237,7 @@ $ sudo alternatives --config java
   Indique para manter a seleção atual[+] ou digite o número da seleção:
 </code></pre>
 
-<p>Neste caso, escolha a opção 2 (“/usr/java/jdk1.8.0_101/jre/bin/java”).</p>
+<p>Neste caso, escolha a opção 2 (<code class="language-plaintext highlighter-rouge">/usr/java/jdk1.8.0_101/jre/bin/java</code>).</p>
 
 <p>Para conferir se o JDK está instalado, digite o comando abaixo no terminal e verifique se a saída é parecida com esta:</p>
 
@@ -248,7 +248,7 @@ $ java -version
   Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)
 </code></pre>
 
-<p>Agora vamos fazer um “<em>Hello Word</em>” para testar se está tudo funcionando. Abra um editor de texto e entre com o código fonte abaixo:</p>
+<p>Agora vamos fazer um <em>Hello Word</em> para testar se está tudo funcionando. Abra um editor de texto e entre com o código fonte abaixo:</p>
 
 <pre><code class="java">
 public class Main {
@@ -258,13 +258,13 @@ public class Main {
 }
 </code></pre>
 
-<p>Salve o arquivo com o nome “<em>Main.java</em>” e entre no diretório onde este se encontra para compilá-lo:</p>
+<p>Salve o arquivo com o nome <code class="language-plaintext highlighter-rouge">Main.java</code> e entre no diretório onde este se encontra para compilá-lo:</p>
 
 <pre><code class="shell terminal">
 $ javac Main.java
 </code></pre>
 
-<p>O compilador do <strong>Java</strong>, o <strong>javac</strong>, gerará um arquivo chamado “<em>Main.class</em>”, para rodá-lo basta entrar com:</p>
+<p>O compilador do <strong>Java</strong>, o <strong>javac</strong>, gerará um arquivo chamado <code class="language-plaintext highlighter-rouge">Main.class</code>, para rodá-lo basta entrar com:</p>
 
 <pre><code class="shell terminal">
 $ java Main
@@ -307,17 +307,17 @@ $ java Main
 
         
 
-        <a href="/tags/ferramentas-de-desenvolvimento/" title="Ferramentas de Desenvolvimento">Ferramentas de Desenvolvimento</a>
+        <a href="/tags/ferramentas-de-desenvolvimento/" title="Ferramentas de Desenvolvimento">Ferramentas de Desenvolvimento</a>, <a href="/tags/linux/" title="Linux">Linux</a>
       </li>
     
   </ul>
 </header>
 <div class="content-post">
-        <p>O Atom é um editor de texto open source muito usado por desenvolvedores. Foi inicialmente desenvolvido pelo <strong>GitHub</strong> e seu repositório oficial <a href="https://github.com/atom/atom">está disponível no próprio Github</a>.</p>
+        <p>O <strong>Atom</strong> é um editor de texto open source muito usado por desenvolvedores. Foi inicialmente desenvolvido pelo <strong>GitHub</strong> e seu repositório oficial <a href="https://github.com/atom/atom">está disponível no próprio Github</a>.</p>
 
 <h2 id="instalação">Instalação</h2>
 
-<p>Uma das características deste editor é que ele é multiplataforma. Para <strong>Linux</strong>, o Atom é <a href="https://atom.io/" title="Site oficial do Atom" target="_blank">disponibilizado</a> em pacotes <em>.deb</em> e <em>.rpm</em>, além da possibilidade de instalação a partir dos fontes e contando com um excelente <a href="https://github.com/atom/atom/blob/master/docs/build-instructions/linux.md" target="_blank">tutorial</a>.</p>
+<p>Uma das características deste editor é que ele é multiplataforma. Para <strong>Linux</strong>, o Atom é <a href="https://atom.io/" title="Site oficial do Atom" target="_blank">disponibilizado</a> em pacotes <code class="language-plaintext highlighter-rouge">.deb</code> e <code class="language-plaintext highlighter-rouge">.rpm</code>, além da possibilidade de instalação a partir dos fontes e contando com um excelente <a href="https://github.com/atom/atom/blob/master/docs/build-instructions/linux.md" target="_blank">tutorial</a>.</p>
 
 <p>Com o pacote de sua distribuição baixado, basta entrar no diretório onde o mesmo se encontra e executar um dos comando abaixo de acordo com sua distro.</p>
 
@@ -338,12 +338,12 @@ $ sudo rpm -Uvh atom.x86_64.rpm
 <p>Por padrão, o Atom já vem como vários recursos uteis, entre eles temos:</p>
 
 <ul>
-  <li><em>Integração com o Github</em>;</li>
-  <li><em>Gerenciador de pacotes</em>;</li>
-  <li><em>Syntax highlight</em>;</li>
-  <li><em>Live preview para arquivos Markdown</em>;</li>
-  <li><em>Divisão de Painéis (Split)</em>;</li>
-  <li><em>Tree view para diretórios e arquivos</em>.</li>
+  <li>Integração com o Github;</li>
+  <li>Gerenciador de pacotes;</li>
+  <li>Syntax highlight;</li>
+  <li>Live preview para arquivos Markdown;</li>
+  <li>Divisão de Painéis (Split);</li>
+  <li>Tree view para diretórios e arquivos.</li>
 </ul>
 
 <div style="text-align: center"><a href="/images/atom-instalacao-primeiros-passos/atom-live-preview-md.png" target="_blank"><figure><img src="/images/atom-instalacao-primeiros-passos/atom-live-preview-md.png" style="max-width: 100%" alt="Live Preview para Markdown" title="Live Preview para Markdown" /><figcaption class="text-center">Live Preview para Markdown.</figcaption></figure></a></div>
@@ -352,29 +352,34 @@ $ sudo rpm -Uvh atom.x86_64.rpm
 
 <h2 id="personalizando-o-atom">Personalizando o Atom</h2>
 
-<p>Agora vamos para a melhor parte, os pacote. Como mencionado acima, o gerenciador do pacotes já vem ativado por padrão, para acessá-lo entre no menu <em>Edit</em> &gt; <em>Preferences</em>, vai aparecer a aba “<em>Settings</em>”.</p>
+<p>Agora vamos para a melhor parte, os pacote. Como mencionado acima, o gerenciador do pacotes já vem ativado por padrão, para acessá-lo entre no menu <code class="language-plaintext highlighter-rouge">Edit</code> &gt; <code class="language-plaintext highlighter-rouge">Preferences</code>, vai aparecer a aba <code class="language-plaintext highlighter-rouge">Settings</code>.</p>
 
-<p>Na aba “Settings” podemos definir teclas de atalhos (Keybindings), configuração gerais (Settings), instalar (install) e atualizar (updates) pacotes e temas, gerenciar pacotes instalados (Packages) e escolher o visual da aplicação (Themes).</p>
+<p>Na aba <code class="language-plaintext highlighter-rouge">Settings</code> podemos definir teclas de atalhos (<em>Keybindings</em>), configuração gerais (<em>Settings</em>), instalar (<em>install</em>) e atualizar (<em>updates</em>) pacotes e temas, gerenciar pacotes instalados (<em>Packages</em>) e escolher o visual da aplicação (<em>Themes</em>).</p>
 
-<p>Para ilustrar o potencial de personalização do atom, vamos deixá-lo parecido com o <strong>Sublime Text</strong>. Duas características são icônicas no Sublime Text: o tema “<strong>monokai</strong>” e o “<strong>minimap</strong>”.</p>
+<p>Para ilustrar o potencial de personalização do atom, vamos deixá-lo parecido com o <strong>Sublime Text</strong>. Duas características são icônicas no Sublime Text: o tema <strong>monokai</strong> e o <strong>minimap</strong>”.</p>
 
 <h3 id="instalando-um-tema">Instalando um tema</h3>
 
-<p>Para instalar o tema vá em “<em>Install</em>”, digite “<em>monokai</em>” e click em “<em>Themes</em>”. Entre as opções escolha “<em>monokai</em>” do usuário “<em>kevinsawicki</em>” e click em “<em>Install</em>”.</p>
+<p>Para instalar o tema vá em <code class="language-plaintext highlighter-rouge">Install</code>, digite <code class="language-plaintext highlighter-rouge">monokai</code> e click em <code class="language-plaintext highlighter-rouge">Themes</code>. Entre as opções escolha <code class="language-plaintext highlighter-rouge">monokai</code> do usuário <code class="language-plaintext highlighter-rouge">kevinsawicki</code> e click em <code class="language-plaintext highlighter-rouge">Install</code>.</p>
 
-<p>Depois de instalação, vá em “<em>Themes</em>” para configurar o tema. Em “<em>UI Theme</em>” escolha “<em>Atom Light</em>” e em “<em>Syntax Theme</em>” escolha “<em>Monokai</em>”.</p>
+<p>Depois de instalação, vá em <code class="language-plaintext highlighter-rouge">Themes</code> para configurar o tema. Em <code class="language-plaintext highlighter-rouge">UI Theme</code> escolha <code class="language-plaintext highlighter-rouge">Atom Light</code> e em <code class="language-plaintext highlighter-rouge">Syntax Theme</code> escolha <code class="language-plaintext highlighter-rouge">Monokai</code>.</p>
 
 <h3 id="instalando-um-pacote">Instalando um pacote</h3>
 
-<p>Para instalar um pacote o procedimento é similar, vá em “<em>Install</em>”, digite “<em>minimap</em>” e precione “<em>enter</em>” ou click em “<em>Packages</em>”. Escolha o pacote “<em>minimap</em>” do usuário “<em>atom-minimap</em>” e click em “<em>Install</em>”.</p>
+<p>Para instalar um pacote o procedimento é similar, vá em <code class="language-plaintext highlighter-rouge">Install</code>, digite <code class="language-plaintext highlighter-rouge">minimap</code> e precione <code class="language-plaintext highlighter-rouge">enter</code> ou click em <code class="language-plaintext highlighter-rouge">Packages</code>. Escolha o pacote <code class="language-plaintext highlighter-rouge">minimap</code> do usuário <code class="language-plaintext highlighter-rouge">atom-minimap</code> e click em <code class="language-plaintext highlighter-rouge">Install</code>.</p>
 
-<p>Geralmente os pacotes são ativados logo após serem instalados, para conferir vá em “<em>Packages</em>” e veja se o pacote está ativo, caso não esteja click em “<em>Enable</em>”.</p>
+<p>Geralmente os pacotes são ativados logo após serem instalados, para conferir vá em <code class="language-plaintext highlighter-rouge">Packages</code> e veja se o pacote está ativo, caso não esteja click em <code class="language-plaintext highlighter-rouge">Enable</code>.</p>
 
-<div style="text-align: center"><a href="/images/atom-instalacao-primeiros-passos/atom-monokai-theme.png" target="_blank"><figure><img src="/images/atom-instalacao-primeiros-passos/atom-monokai-theme.png" style="max-width: 100%" alt="Visual do Atom depois da personalização" title="Visual do Atom depois da personalização" /><figcaption class="text-center">Visual do Atom depois da personalização.</figcaption></figure></a>
+<div style="text-align: center">
+  <a href="/images/atom-instalacao-primeiros-passos/atom-monokai-theme.png" target="_blank">
+    <figure>
+      <img src="/images/atom-instalacao-primeiros-passos/atom-monokai-theme.png" style="max-width: 100%" alt="Visual do Atom depois da personalização" title="Visual do Atom depois da personalização" />
+      <figcaption class="text-center">Visual do Atom depois da personalização.</figcaption>
+    </figure>
+  </a>
 </div>
 
 <p>A aparencia do Atom ficará como na figura acima.</p>
-
 
       </div>
     </article>
@@ -415,20 +420,10 @@ $ sudo rpm -Uvh atom.x86_64.rpm
           <li>
             <i class="fa fa-angle-right" aria-hidden="true"></i>
 
-            <a href="/categories/desenvolvimento">
-              Desenvolvimento
-              <i class="fa fa-circle" aria-hidden="true"></i>
-              1
-            </a>
-          </li>
-        
-          <li>
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
-
             <a href="/categories/ferramentas">
               Ferramentas
               <i class="fa fa-circle" aria-hidden="true"></i>
-              3
+              4
             </a>
           </li>
         
@@ -469,6 +464,13 @@ $ sudo rpm -Uvh atom.x86_64.rpm
             <a href="/tags/java">
               <i class="fa fa-tag" aria-hidden="true"></i>
               Java
+            </a>
+          </li>
+        
+          <li>
+            <a href="/tags/linux">
+              <i class="fa fa-tag" aria-hidden="true"></i>
+              Linux
             </a>
           </li>
         

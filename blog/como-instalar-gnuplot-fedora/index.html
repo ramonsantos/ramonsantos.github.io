@@ -39,7 +39,7 @@
 <meta property="fb:admins" content="CjHweHcsUQm" />
 <meta property="fb:app_id" content="122740845026539" />
 <script type="application/ld+json">
-{"url":"https://ramonsantos.github.io/blog/como-instalar-gnuplot-fedora/","@type":"BlogPosting","image":"https://ramonsantos.github.io/images/como-instalar-gnuplot-fedora/gnuplot-sin-x.png","headline":"Como instalar o Gnuplot no Fedora","dateModified":"2016-08-06T17:42:50+00:00","datePublished":"2016-08-06T17:42:50+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://ramonsantos.github.io/blog/como-instalar-gnuplot-fedora/"},"description":"Instalação do Gnuplot no fedora.","@context":"https://schema.org"}</script>
+{"url":"https://ramonsantos.github.io/blog/como-instalar-gnuplot-fedora/","@type":"BlogPosting","headline":"Como instalar o Gnuplot no Fedora","dateModified":"2016-08-06T17:42:50+00:00","datePublished":"2016-08-06T17:42:50+00:00","image":"https://ramonsantos.github.io/images/como-instalar-gnuplot-fedora/gnuplot-sin-x.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://ramonsantos.github.io/blog/como-instalar-gnuplot-fedora/"},"description":"Instalação do Gnuplot no fedora.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -114,7 +114,7 @@
 
         
 
-        <a href="/tags/fedora/" title="Fedora">Fedora</a>, <a href="/tags/ferramentas-acad%C3%AAmicas/" title="Ferramentas Acadêmicas">Ferramentas Acadêmicas</a>
+        <a href="/tags/fedora/" title="Fedora">Fedora</a>, <a href="/tags/ferramentas-acad%C3%AAmicas/" title="Ferramentas Acadêmicas">Ferramentas Acadêmicas</a>, <a href="/tags/linux/" title="Linux">Linux</a>
       </li>
     
   </ul>
@@ -124,7 +124,7 @@
 
 <p>O Gnuplot não é disponibilizado por padrão nos repositórios oficiais do Fedora, desta forma, é necessário <a href="https://sourceforge.net/projects/gnuplot/files/gnuplot/" target="_blank">fazer o download do software manualmente</a>.</p>
 
-<p>Depois de fazer o download devemos abrir o terminal, entrar no diretório onde está o arquivo e descompactá-lo. Supondo que o nome do arquivo é <em>“gnuplot-5.0.3.tar.gz”</em> e está em <em>“/home/user/Downloads”</em>, entre com os comandos abaixo no terminal.</p>
+<p>Depois de fazer o download devemos abrir o terminal, entrar no diretório onde está o arquivo e descompactá-lo. Supondo que o nome do arquivo é <code class="language-plaintext highlighter-rouge">gnuplot-5.0.3.tar.gz</code> e está em <code class="language-plaintext highlighter-rouge">/home/user/Downloads</code>, entre com os comandos abaixo no terminal.</p>
 
 <p>Entrar no diretório do download:</p>
 
@@ -154,7 +154,7 @@ $ ./configure
 $ sudo make install
 </code></pre>
 
-<p>Se não houver problemas durante esse processo, a instalação será concluída com sucesso. Para verificar se o software está funcionando, vamos fazer uma espécie de <em>“Hello Word”</em>, ou seja, vamos plotar uma gráfico simples.</p>
+<p>Se não houver problemas durante esse processo, a instalação será concluída com sucesso. Para verificar se o software está funcionando, vamos fazer uma espécie de <em>Hello Word</em>, ou seja, vamos plotar uma gráfico simples.</p>
 
 <p>Para entrar no Gnuplot vá ao terminal e faça:</p>
 
@@ -162,7 +162,7 @@ $ sudo make install
 $ gnuplot
 </code></pre>
 
-<p>Com o Gnuplot aberto no terminal, vamos plotar o gráfico de sen(x):</p>
+<p>Com o Gnuplot aberto no terminal, vamos plotar o gráfico de <em>sen(x)</em>:</p>
 
 <pre><code class="shell terminal">
 gnuplot&gt; plot sin(x)
@@ -216,20 +216,10 @@ gnuplot&gt; plot sin(x)
           <li>
             <i class="fa fa-angle-right" aria-hidden="true"></i>
 
-            <a href="/categories/desenvolvimento">
-              Desenvolvimento
-              <i class="fa fa-circle" aria-hidden="true"></i>
-              1
-            </a>
-          </li>
-        
-          <li>
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
-
             <a href="/categories/ferramentas">
               Ferramentas
               <i class="fa fa-circle" aria-hidden="true"></i>
-              3
+              4
             </a>
           </li>
         
@@ -270,6 +260,13 @@ gnuplot&gt; plot sin(x)
             <a href="/tags/java">
               <i class="fa fa-tag" aria-hidden="true"></i>
               Java
+            </a>
+          </li>
+        
+          <li>
+            <a href="/tags/linux">
+              <i class="fa fa-tag" aria-hidden="true"></i>
+              Linux
             </a>
           </li>
         

@@ -39,7 +39,7 @@
 <meta property="fb:admins" content="CjHweHcsUQm" />
 <meta property="fb:app_id" content="122740845026539" />
 <script type="application/ld+json">
-{"url":"https://ramonsantos.github.io/blog/como-instalar-java-fedora/","@type":"BlogPosting","image":"https://ramonsantos.github.io/images/como-instalar-java-fedora/java.png","headline":"Como instalar o Java no Fedora","dateModified":"2016-09-05T22:10:58+00:00","datePublished":"2016-09-05T22:10:58+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://ramonsantos.github.io/blog/como-instalar-java-fedora/"},"description":"O objetivo deste post é mostrar como instalar o JDK no Fedora, no entanto, este artigo pode servir para outras distribuições da família Red Hat, como é o caso de CentOS.","@context":"https://schema.org"}</script>
+{"url":"https://ramonsantos.github.io/blog/como-instalar-java-fedora/","@type":"BlogPosting","headline":"Como instalar o Java no Fedora","dateModified":"2016-09-05T22:10:58+00:00","datePublished":"2016-09-05T22:10:58+00:00","image":"https://ramonsantos.github.io/images/como-instalar-java-fedora/java.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://ramonsantos.github.io/blog/como-instalar-java-fedora/"},"description":"O objetivo deste post é mostrar como instalar o JDK no Fedora, no entanto, este artigo pode servir para outras distribuições da família Red Hat, como é o caso de CentOS.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -101,7 +101,7 @@
       <i></i>
       <i class="fa fa-archive"></i>
       
-      <a href="/categories/desenvolvimento/" title="Desenvolvimento">Desenvolvimento</a>
+      <a href="/categories/ferramentas/" title="Ferramentas">Ferramentas</a>
     </li>
 
     
@@ -114,7 +114,7 @@
 
         
 
-        <a href="/tags/fedora/" title="Fedora">Fedora</a>, <a href="/tags/java/" title="Java">Java</a>
+        <a href="/tags/fedora/" title="Fedora">Fedora</a>, <a href="/tags/java/" title="Java">Java</a>, <a href="/tags/linux/" title="Linux">Linux</a>
       </li>
     
   </ul>
@@ -122,9 +122,9 @@
 <div class="content-post">
     <p>O objetivo deste post é mostrar <strong>como instalar o JDK no Fedora</strong>, no entanto, este artigo pode servir para outras distribuições da família <strong>Red Hat</strong>, como é o caso de <strong><a href="https://www.centos.org/" target="_blank">CentOS</a></strong>.</p>
 
-<p>Primeiramente é preciso fazer o <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">download do pacote RPM do JDK através do site oficial</a>. A versão mais atual do JDK neste momento é a 1.8.101. Desta forma, escolha o pacote referente à arquitetura de sua máquina (32 bits ou 64 bits).</p>
+<p>Primeiramente é preciso fazer o <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">download do pacote RPM do JDK através do site oficial</a>. A versão mais atual do JDK neste momento é a <code class="language-plaintext highlighter-rouge">1.8.101</code>. Desta forma, escolha o pacote referente à arquitetura de sua máquina (32 bits ou 64 bits).</p>
 
-<p>Supondo que o download do pacote de instalação foi feito no o diretório <em>“/home/user/Downloads”</em> e o arquivo chama-se “jdk-8u101-linux-x64.rpm”, entre com os seguintes comandos no terminal:</p>
+<p>Supondo que o download do pacote de instalação foi feito no o diretório <code class="language-plaintext highlighter-rouge">/home/user/Downloads</code> e o arquivo chama-se <code class="language-plaintext highlighter-rouge">jdk-8u101-linux-x64.rpm</code>, entre com os seguintes comandos no terminal:</p>
 
 <pre><code class="shell terminal">
 $ cd Downloads
@@ -148,7 +148,7 @@ $ sudo alternatives --config java
   Indique para manter a seleção atual[+] ou digite o número da seleção:
 </code></pre>
 
-<p>Neste caso, escolha a opção 2 (“/usr/java/jdk1.8.0_101/jre/bin/java”).</p>
+<p>Neste caso, escolha a opção 2 (<code class="language-plaintext highlighter-rouge">/usr/java/jdk1.8.0_101/jre/bin/java</code>).</p>
 
 <p>Para conferir se o JDK está instalado, digite o comando abaixo no terminal e verifique se a saída é parecida com esta:</p>
 
@@ -159,7 +159,7 @@ $ java -version
   Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)
 </code></pre>
 
-<p>Agora vamos fazer um “<em>Hello Word</em>” para testar se está tudo funcionando. Abra um editor de texto e entre com o código fonte abaixo:</p>
+<p>Agora vamos fazer um <em>Hello Word</em> para testar se está tudo funcionando. Abra um editor de texto e entre com o código fonte abaixo:</p>
 
 <pre><code class="java">
 public class Main {
@@ -169,13 +169,13 @@ public class Main {
 }
 </code></pre>
 
-<p>Salve o arquivo com o nome “<em>Main.java</em>” e entre no diretório onde este se encontra para compilá-lo:</p>
+<p>Salve o arquivo com o nome <code class="language-plaintext highlighter-rouge">Main.java</code> e entre no diretório onde este se encontra para compilá-lo:</p>
 
 <pre><code class="shell terminal">
 $ javac Main.java
 </code></pre>
 
-<p>O compilador do <strong>Java</strong>, o <strong>javac</strong>, gerará um arquivo chamado “<em>Main.class</em>”, para rodá-lo basta entrar com:</p>
+<p>O compilador do <strong>Java</strong>, o <strong>javac</strong>, gerará um arquivo chamado <code class="language-plaintext highlighter-rouge">Main.class</code>, para rodá-lo basta entrar com:</p>
 
 <pre><code class="shell terminal">
 $ java Main
@@ -224,20 +224,10 @@ $ java Main
           <li>
             <i class="fa fa-angle-right" aria-hidden="true"></i>
 
-            <a href="/categories/desenvolvimento">
-              Desenvolvimento
-              <i class="fa fa-circle" aria-hidden="true"></i>
-              1
-            </a>
-          </li>
-        
-          <li>
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
-
             <a href="/categories/ferramentas">
               Ferramentas
               <i class="fa fa-circle" aria-hidden="true"></i>
-              3
+              4
             </a>
           </li>
         
@@ -278,6 +268,13 @@ $ java Main
             <a href="/tags/java">
               <i class="fa fa-tag" aria-hidden="true"></i>
               Java
+            </a>
+          </li>
+        
+          <li>
+            <a href="/tags/linux">
+              <i class="fa fa-tag" aria-hidden="true"></i>
+              Linux
             </a>
           </li>
         
