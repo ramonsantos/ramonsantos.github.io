@@ -18,6 +18,8 @@ q ::before, q ::after { content: ''; }
 
 abbr { border: 0; font-variant: normal; }
 
+code { font-family: monospace, monospace; font-size: 1em; }
+
 body { color: #3e4d5c; font-family: 'Open Sans', sans-serif; }
 
 pre { overflow: auto; }
@@ -162,7 +164,7 @@ a:hover { text-decoration: underline; }
 
 .img img { max-width: 100%; }
 
-code { background-color: #e9e9e9; border-radius: 2px; padding: 3px; }
+code { background-color: #e9e9e9; border-radius: 2px; padding: 2px; font-size: 0.9rem; }
 
 pre code { font-size: .9rem; margin-bottom: .8rem; }
 
