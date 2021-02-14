@@ -69,7 +69,7 @@ GEM
     safe_yaml (1.0.5)
     sassc (2.4.0)
       ffi (~> 1.9)
-    shine-on-you-crazy-diamond-theme (1.1.1)
+    shine-on-you-crazy-diamond-theme (1.1.2)
       jekyll (~> 4.0)
       jekyll-archives (~> 2.2, >= 2.2.1)
       jekyll-feed (~> 0.15)
@@ -96,7 +96,7 @@ DEPENDENCIES
   jekyll-seo-tag (~> 2.6, >= 2.6.1)
   jekyll-sitemap (~> 1.4)
   jekyll-target-blank (~> 2.0)
-  shine-on-you-crazy-diamond-theme (~> 1.1.1)
+  shine-on-you-crazy-diamond-theme (~> 1.1.2)
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
