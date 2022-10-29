@@ -6,8 +6,8 @@
 Personal website.
 
 ## Technology
-  * Ruby 2.7.1
-  * Jekyll 4.1.1
+  * Ruby 3.1.2
+  * Jekyll 4.3.1
 
 ## Services Used
   * Github Pages
@@ -18,7 +18,7 @@ Install dependencies:
 
     $ bundle install
 
-Run de project:
+Run the project:
 
     $ jekyll server
 
