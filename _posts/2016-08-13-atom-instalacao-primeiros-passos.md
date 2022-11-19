@@ -33,7 +33,7 @@ $ sudo rpm -Uvh atom.x86_64.rpm
 
 ## Recursos nativos
 
-Por padrão, o Atom já vem como vários recursos uteis, entre eles temos:
+Por padrão, o Atom já vem como vários recursos úteis, entre eles temos:
 
   * Integração com o Github;
   * Gerenciador de pacotes;
@@ -48,7 +48,7 @@ Por padrão, o Atom já vem como vários recursos uteis, entre eles temos:
 
 ## Personalizando o Atom
 
-Agora vamos para a melhor parte, os pacote. Como mencionado acima, o gerenciador do pacotes já vem ativado por padrão, para acessá-lo entre no menu ```Edit``` > ```Preferences```, vai aparecer a aba ```Settings```.
+Agora vamos para a melhor parte, os pacotes. Como mencionado acima, o gerenciador do pacotes já vem ativado por padrão, para acessá-lo entre no menu ```Edit``` > ```Preferences```, vai aparecer a aba ```Settings```.
 
 Na aba ```Settings``` podemos definir teclas de atalhos (*Keybindings*), configuração gerais (*Settings*), instalar (*install*) e atualizar (*updates*) pacotes e temas, gerenciar pacotes instalados (*Packages*) e escolher o visual da aplicação (*Themes*).
 
@@ -75,4 +75,4 @@ Geralmente os pacotes são ativados logo após serem instalados, para conferir v
   </a>
 </div>
 
-A aparencia do Atom ficará como na figura acima.
+A aparência do Atom ficará como na figura acima.

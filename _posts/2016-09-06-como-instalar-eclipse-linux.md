@@ -12,7 +12,7 @@ image:
   path: "/images/como-instalar-eclipse-linux/eclipse.png"
 ---
 
-O **[Eclipse](https://eclipse.org/)** é uma excelente ferramenta, [open source](https://github.com/eclipse), para desenvolvimento de aplicações em **Java** e em outras linguagens. Neste artigo, será abordado a instalação desta ferramenta em sistemas **Linux**. O único pré-requisito para ter o Eclipse em sua máquina, é ter o [JDK instalado](https://ramonsantos.github.io/blog/como-instalar-java-fedora/).
+O **[Eclipse](https://eclipse.org/)** é uma excelente ferramenta, [open source](https://github.com/eclipse), para desenvolvimento de aplicações em **Java** e em outras linguagens. Neste artigo, será abordado a instalação desta ferramenta no sistema **Linux**. O único pré-requisito para ter o Eclipse em sua máquina, é ter o [JDK instalado](https://ramonsantos.github.io/blog/como-instalar-java-fedora/).
 
 A primeira coisa a ser feita é o [download do Eclipse](https://eclipse.org/downloads/), sendo que a versão mais recente é o [Eclipse Neon](https://projects.eclipse.org/releases/neon).
 
@@ -21,7 +21,6 @@ Dado que o dowload foi feito no diretório ```/home/user/Downloads```, execute n
 <pre><code class="shell terminal">
 $ cd Downloads
 $ tar -vzxf eclipse*
-$ sudo chmod 777 /opt
 $ sudo mv eclipse /opt
 </code></pre>
 

@@ -46,7 +46,7 @@ $ ./configure
 $ sudo make install
 </code></pre>
 
-Se não houver problemas durante esse processo, a instalação será concluída com sucesso. Para verificar se o software está funcionando, vamos fazer uma espécie de *Hello Word*, ou seja, vamos plotar uma gráfico simples.
+Se não houver problemas durante esse processo, a instalação será concluída com sucesso. Para verificar se o software está funcionando, vamos fazer uma espécie de *Hello Word*, ou seja, vamos plotar um gráfico simples.
 
 Para entrar no Gnuplot vá ao terminal e faça:
 
@@ -65,4 +65,4 @@ Com isso, uma janela deverá ser aberta com o gráfico da função como na figur
 <div style="text-align: center"><a href="/images/como-instalar-gnuplot-fedora/gnuplot-sin-x.png" target="_blank"><figure><img src="/images/como-instalar-gnuplot-fedora/gnuplot-sin-x.png" style="max-width: 100%" alt="Imagem plotada através do Gnuplot" title="Imagem plotada através do Gnuplot" /><figcaption class="text-center">Imagem plotada através do Gnuplot.</figcaption></figure></a>
 </div>
 
-Eu usei o Gnuplot para gerar os gráficos do [meu TCC](http://www.slideshare.net/RamonSantos28/tcc-avaliao-de-dependabilidade-e-anlise-de-sensibilidade-de-uma-plataforma-como-servio-paas) e a qualidade ficou muito boa. Para finalizar, uma outra dica é exportar os gráficos gerados para formatos vetoriais, como o **EPS** ou o **SVG**.
+Eu usei o Gnuplot para gerar os gráficos do [meu TCC](http://www.slideshare.net/RamonSantos28/tcc-avaliao-de-dependabilidade-e-anlise-de-sensibilidade-de-uma-plataforma-como-servio-paas) e a qualidade ficou ótima. Para finalizar, outra dica é exportar os gráficos gerados para formatos vetoriais, como o **EPS** ou o **SVG**.
