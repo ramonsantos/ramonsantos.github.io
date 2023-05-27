@@ -1,5 +1,5 @@
 # Ramon Santos
-[![Build Status](https://travis-ci.org/ramonsantos/ramonsantos.github.io.svg?branch=main)](https://travis-ci.org/ramonsantos/ramonsantos.github.io)
+[![Build Status](https://github.com/ramonsantos/ramonsantos.github.io/actions/workflows/github-pages.yml/badge.svg)](https://github.com/ramonsantos/ramonsantos.github.io/actions)
 ![ruby](https://img.shields.io/badge/ruby-3.1.2-dc143c)
 ![jekyll](https://img.shields.io/badge/jekyll-4.3.1-dc143c)
 
