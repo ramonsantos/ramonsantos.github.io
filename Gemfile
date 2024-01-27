@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'jekyll', '~> 4.3.1'
+gem 'jekyll', '~> 4.3.3'
 
 gem 'shine-on-you-crazy-diamond-theme', '~> 1.1.2'
 
@@ -10,5 +10,5 @@ group :jekyll_plugins do
   gem 'jekyll-paginate-v2', '~> 3.0'
   gem 'jekyll-seo-tag', '~> 2.8', '>= 2.8.0'
   gem 'jekyll-sitemap', '~> 1.4'
-  gem 'jekyll-target-blank', '~> 2.0'
+  gem 'jekyll-target-blank', '~> 2.0', '>= 2.0.2'
 end
