@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head><title>
+  
+    Atom: instalação e primeiros passos | Ramon Santos
+  
+</title>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="/assets/main.css">
+<link rel="icon" href="/favicon.svg">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Atom: instalação e primeiros passos" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="description" content="Instalação e introdução ao editor Atom." />
+<meta property="og:description" content="Instalação e introdução ao editor Atom." />
+<link rel="canonical" href="https://ramonsantos.github.io/blog/atom-instalacao-primeiros-passos/" />
+<meta property="og:url" content="https://ramonsantos.github.io/blog/atom-instalacao-primeiros-passos/" />
+<meta property="og:site_name" content="Ramon Santos" />
+<meta property="og:image" content="https://ramonsantos.github.io/images/atom-instalacao-primeiros-passos/atom-icon.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-08-13T17:27:19+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:image" content="https://ramonsantos.github.io/images/atom-instalacao-primeiros-passos/atom-icon.png" />
+<meta property="twitter:title" content="Atom: instalação e primeiros passos" />
+<meta name="twitter:site" content="@ramonsantos_dev" />
+<meta name="twitter:creator" content="@ramonsantos_dev" />
+<meta property="fb:admins" content="CjHweHcsUQm" />
+<meta property="fb:app_id" content="122740845026539" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2016-08-13T17:27:19+00:00","datePublished":"2016-08-13T17:27:19+00:00","description":"Instalação e introdução ao editor Atom.","headline":"Atom: instalação e primeiros passos","image":"https://ramonsantos.github.io/images/atom-instalacao-primeiros-passos/atom-icon.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://ramonsantos.github.io/blog/atom-instalacao-primeiros-passos/"},"url":"https://ramonsantos.github.io/blog/atom-instalacao-primeiros-passos/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+  <body><header class="header">
+  <div class="header-content content-width">
+    <h1>
+      <a class="site-title" href="/" title="Blog sobre desenvolvimento">
+        Ramon Santos
+      </a>
+    </h1>
+
+    <a id="menuBar" class="mobile-menu-bar" href="javascript:void(0);">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </a>
+
+    <nav class="header-menu">
+      <ul>
+        
+          
+            <li>
+          
+
+            <a href="/">Home</a>
+          </li>
+        
+          
+            <li>
+          
+
+            <a href="/blog/">Blog</a>
+          </li>
+        
+          
+            <li>
+          
+
+            <a href="/about/">Sobre</a>
+          </li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+<section class="content-section content-width">
+      <main class="main-section"><article><header class="header-post">
+  <h1>
+    <a href="/blog/atom-instalacao-primeiros-passos/">Atom: instalação e primeiros passos</a>
+  </h1>
+
+  <ul>
+    <li>
+      <i></i>
+      <i class="fa fa-calendar"></i>
+      <time datetime="2016-08-13T17:27:19+00:00">13/08/2016</time>
+    </li>
+
+    <li>
+      <i></i>
+      <i class="fa fa-archive"></i>
+      
+      <a href="/categories/ferramentas/" title="Ferramentas">Ferramentas</a>
+    </li>
+
+    
+      <li>
+        <i></i>
+        <i class="fa fa-tags"></i>
+
+        
+        
+
+        
+
+        <a href="/tags/ferramentas-de-desenvolvimento/" title="Ferramentas de Desenvolvimento">Ferramentas de Desenvolvimento</a>, <a href="/tags/linux/" title="Linux">Linux</a>
+      </li>
+    
+  </ul>
+</header>
+<div class="content-post">
+    <p>O <strong>Atom</strong> é um editor de texto open source muito usado por desenvolvedores. Foi inicialmente desenvolvido pelo <strong>GitHub</strong> e seu repositório oficial <a href="https://github.com/atom/atom" target="_blank">está disponível no próprio Github</a>.</p>
+
+<h2 id="instalação">Instalação</h2>
+
+<p>Uma das características deste editor é que ele é multiplataforma. Para <strong>Linux</strong>, o Atom é <a href="https://atom.io/" title="Site oficial do Atom" target="_blank">disponibilizado</a> em pacotes <code class="language-plaintext highlighter-rouge">.deb</code> e <code class="language-plaintext highlighter-rouge">.rpm</code>, além da possibilidade de instalação a partir dos fontes e contando com um excelente <a href="https://github.com/atom/atom/blob/master/docs/build-instructions/linux.md" target="_blank">tutorial</a>.</p>
+
+<p>Com o pacote de sua distribuição baixado, basta entrar no diretório onde o mesmo se encontra e executar um dos comando abaixo de acordo com sua distro.</p>
+
+<h4 id="família-debian-debian-ubuntu-linux-mint-e-etc">Família Debian (Debian, Ubuntu, Linux Mint e etc):</h4>
+
+<pre><code class="shell terminal">
+$ sudo dpkg -i atom-amd64.deb
+</code></pre>
+
+<h4 id="família-red-hat-fedora-centos-opensuse-e-etc">Família Red Hat (Fedora, CentOS, openSUSE e etc):</h4>
+
+<pre><code class="shell terminal">
+$ sudo rpm -Uvh atom.x86_64.rpm
+</code></pre>
+
+<h2 id="recursos-nativos">Recursos nativos</h2>
+
+<p>Por padrão, o Atom já vem como vários recursos úteis, entre eles temos:</p>
+
+<ul>
+  <li>Integração com o Github;</li>
+  <li>Gerenciador de pacotes;</li>
+  <li>Syntax highlight;</li>
+  <li>Live preview para arquivos Markdown;</li>
+  <li>Divisão de Painéis (Split);</li>
+  <li>Tree view para diretórios e arquivos.</li>
+</ul>
+
+<div style="text-align: center"><a href="/images/atom-instalacao-primeiros-passos/atom-live-preview-md.png" target="_blank"><figure><img src="/images/atom-instalacao-primeiros-passos/atom-live-preview-md.png" style="max-width: 100%" alt="Live Preview para Markdown" title="Live Preview para Markdown"><figcaption class="text-center">Live Preview para Markdown.</figcaption></figure></a></div>
+
+<div style="text-align: center"><a href="/images/atom-instalacao-primeiros-passos/atom-split.png" target="_blank"><figure><img src="/images/atom-instalacao-primeiros-passos/atom-split.png" style="max-width: 100%" alt="Divisões de Painéis (Split)" title="Divisões de Painéis (Split)"><figcaption class="text-center">Divisões de Painéis (Split).</figcaption></figure></a></div>
+
+<h2 id="personalizando-o-atom">Personalizando o Atom</h2>
+
+<p>Agora vamos para a melhor parte, os pacotes. Como mencionado acima, o gerenciador do pacotes já vem ativado por padrão, para acessá-lo entre no menu <code class="language-plaintext highlighter-rouge">Edit</code> &gt; <code class="language-plaintext highlighter-rouge">Preferences</code>, vai aparecer a aba <code class="language-plaintext highlighter-rouge">Settings</code>.</p>
+
+<p>Na aba <code class="language-plaintext highlighter-rouge">Settings</code> podemos definir teclas de atalhos (<em>Keybindings</em>), configuração gerais (<em>Settings</em>), instalar (<em>install</em>) e atualizar (<em>updates</em>) pacotes e temas, gerenciar pacotes instalados (<em>Packages</em>) e escolher o visual da aplicação (<em>Themes</em>).</p>
+
+<p>Para ilustrar o potencial de personalização do atom, vamos deixá-lo parecido com o <strong>Sublime Text</strong>. Duas características são icônicas no Sublime Text: o tema <strong>monokai</strong> e o <strong>minimap</strong>”.</p>
+
+<h3 id="instalando-um-tema">Instalando um tema</h3>
+
+<p>Para instalar o tema vá em <code class="language-plaintext highlighter-rouge">Install</code>, digite <code class="language-plaintext highlighter-rouge">monokai</code> e click em <code class="language-plaintext highlighter-rouge">Themes</code>. Entre as opções escolha <code class="language-plaintext highlighter-rouge">monokai</code> do usuário <code class="language-plaintext highlighter-rouge">kevinsawicki</code> e click em <code class="language-plaintext highlighter-rouge">Install</code>.</p>
+
+<p>Depois de instalação, vá em <code class="language-plaintext highlighter-rouge">Themes</code> para configurar o tema. Em <code class="language-plaintext highlighter-rouge">UI Theme</code> escolha <code class="language-plaintext highlighter-rouge">Atom Light</code> e em <code class="language-plaintext highlighter-rouge">Syntax Theme</code> escolha <code class="language-plaintext highlighter-rouge">Monokai</code>.</p>
+
+<h3 id="instalando-um-pacote">Instalando um pacote</h3>
+
+<p>Para instalar um pacote o procedimento é similar, vá em <code class="language-plaintext highlighter-rouge">Install</code>, digite <code class="language-plaintext highlighter-rouge">minimap</code> e precione <code class="language-plaintext highlighter-rouge">enter</code> ou click em <code class="language-plaintext highlighter-rouge">Packages</code>. Escolha o pacote <code class="language-plaintext highlighter-rouge">minimap</code> do usuário <code class="language-plaintext highlighter-rouge">atom-minimap</code> e click em <code class="language-plaintext highlighter-rouge">Install</code>.</p>
+
+<p>Geralmente os pacotes são ativados logo após serem instalados, para conferir vá em <code class="language-plaintext highlighter-rouge">Packages</code> e veja se o pacote está ativo, caso não esteja click em <code class="language-plaintext highlighter-rouge">Enable</code>.</p>
+
+<div style="text-align: center">
+  <a href="/images/atom-instalacao-primeiros-passos/atom-monokai-theme.png" target="_blank">
+    <figure>
+      <img src="/images/atom-instalacao-primeiros-passos/atom-monokai-theme.png" style="max-width: 100%" alt="Visual do Atom depois da personalização" title="Visual do Atom depois da personalização">
+      <figcaption class="text-center">Visual do Atom depois da personalização.</figcaption>
+    </figure>
+  </a>
+</div>
+
+<p>A aparência do Atom ficará como na figura acima.</p>
+
+  </div>
+<br>
+
+  <footer id="comments">
+    <div id="disqus_thread"></div>
+
+    <script>
+      var disqus_config = function () {
+        this.page.url = 'https://ramonsantos.github.io/blog/atom-instalacao-primeiros-passos/';
+        this.page.identifier = 'https://ramonsantos.github.io/blog/atom-instalacao-primeiros-passos/';
+      };
+
+      (function() {
+        var d = document, s = d.createElement('script');
+
+        s.src = 'https://ramon-santos.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+
+    <script id="dsq-count-scr" src="//ramon-santos.disqus.com/count.js" async></script>
+
+    <noscript>Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript" rel="nofollow" target="_blank">comments powered by Disqus.</a>
+    </noscript>
+  </footer></article>
+</main><aside class="sidebar-section">
+  
+    <div class="category-subsection">
+      <h2>Categorias</h2>
+
+      <ul>
+        
+
+        
+          <li>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+
+            <a href="/categories/ferramentas">
+              Ferramentas
+              (4)
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  
+
+  
+    <div class="tags-subsection">
+      <h2>Tags</h2>
+
+      <ul>
+        
+
+        
+          <li>
+            <a href="/tags/fedora">
+              <i class="fa fa-tag" aria-hidden="true"></i>
+              Fedora
+            </a>
+          </li>
+        
+          <li>
+            <a href="/tags/ferramentas-acad%C3%AAmicas">
+              <i class="fa fa-tag" aria-hidden="true"></i>
+              Ferramentas Acadêmicas
+            </a>
+          </li>
+        
+          <li>
+            <a href="/tags/ferramentas-de-desenvolvimento">
+              <i class="fa fa-tag" aria-hidden="true"></i>
+              Ferramentas de Desenvolvimento
+            </a>
+          </li>
+        
+          <li>
+            <a href="/tags/java">
+              <i class="fa fa-tag" aria-hidden="true"></i>
+              Java
+            </a>
+          </li>
+        
+          <li>
+            <a href="/tags/linux">
+              <i class="fa fa-tag" aria-hidden="true"></i>
+              Linux
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  
+</aside>
+
+    </section><aside id="mobileMenu" class="mobile-menu mobile-menu-hidden">
+  <a id="menuClose" class="menu-close-btn" href="javascript:void(0);">
+    <i class="fa fa-close" aria-hidden="true"></i>
+  </a>
+
+  <nav class="page-links">
+    <ul>
+      
+        <li>
+          <a href="/">Home</a>
+        </li>
+      
+        <li>
+          <a href="/blog/">Blog</a>
+        </li>
+      
+        <li>
+          <a href="/about/">Sobre</a>
+        </li>
+      
+    </ul>
+  </nav>
+</aside>
+<footer class="footer">
+  <div>
+    © 2025 Ramon Santos.
+    <br>
+    Desenvolvido com <i class="fa fa-heart"></i> + <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> + <i class="fa fa-coffee"></i>.
+  </div>
+</footer>
+<script src="/assets/scripts.js"></script><script>
+  if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-82053881-1', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
+</body>
+</html>
