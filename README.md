@@ -20,5 +20,5 @@ Install dependencies:
 
 Run the project:
 
-    $ jekyll server
+    $ bundle exec jekyll server
 
