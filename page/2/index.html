@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head><title>
+  
+    Ramon Santos
+  
+</title>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="/assets/main.css">
+<link rel="icon" href="/favicon.svg">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Ramon Santos" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="description" content="Blog sobre desenvolvimento" />
+<meta property="og:description" content="Blog sobre desenvolvimento" />
+<link rel="canonical" href="https://ramonsantos.github.io/page/2/" />
+<meta property="og:url" content="https://ramonsantos.github.io/page/2/" />
+<meta property="og:site_name" content="Ramon Santos" />
+<meta property="og:image" content="https://ramonsantos.github.io/ramon-santos.png" />
+<meta property="og:type" content="website" />
+<link rel="prev" href="https://ramonsantos.github.io/" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:image" content="https://ramonsantos.github.io/ramon-santos.png" />
+<meta property="twitter:title" content="Ramon Santos" />
+<meta name="twitter:site" content="@ramonsantos_dev" />
+<meta name="twitter:creator" content="@ramonsantos_dev" />
+<meta property="fb:admins" content="CjHweHcsUQm" />
+<meta property="fb:app_id" content="122740845026539" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Blog sobre desenvolvimento","headline":"Ramon Santos","image":"https://ramonsantos.github.io/ramon-santos.png","url":"https://ramonsantos.github.io/page/2/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+  <body><header class="header">
+  <div class="header-content content-width">
+    <h1>
+      <a class="site-title" href="/" title="Blog sobre desenvolvimento">
+        Ramon Santos
+      </a>
+    </h1>
+
+    <a id="menuBar" class="mobile-menu-bar" href="javascript:void(0);">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </a>
+
+    <nav class="header-menu">
+      <ul>
+        
+          
+            <li>
+          
+
+            <a href="/">Home</a>
+          </li>
+        
+          
+            <li>
+          
+
+            <a href="/blog/">Blog</a>
+          </li>
+        
+          
+            <li>
+          
+
+            <a href="/about/">Sobre</a>
+          </li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+<section class="content-section content-width">
+      <main class="main-section">
+  
+    <article><header class="header-post">
+  <h1>
+    <a href="/blog/como-instalar-gnuplot-fedora/">Como instalar o Gnuplot no Fedora</a>
+  </h1>
+
+  <ul>
+    <li>
+      <i></i>
+      <i class="fa fa-calendar"></i>
+      <time datetime="2016-08-06T17:42:50+00:00">06/08/2016</time>
+    </li>
+
+    <li>
+      <i></i>
+      <i class="fa fa-archive"></i>
+      
+      <a href="/categories/ferramentas/" title="Ferramentas">Ferramentas</a>
+    </li>
+
+    
+      <li>
+        <i></i>
+        <i class="fa fa-tags"></i>
+
+        
+        
+
+        
+
+        <a href="/tags/fedora/" title="Fedora">Fedora</a>, <a href="/tags/ferramentas-acadêmicas/" title="Ferramentas Acadêmicas">Ferramentas Acadêmicas</a>, <a href="/tags/linux/" title="Linux">Linux</a>
+      </li>
+    
+  </ul>
+</header>
+<div class="content-post">
+        <p>Vamos ver como instalar o <strong>Gnuplot</strong> no <strong>Fedora</strong>. Para quem não conhece, <a href="http://www.gnuplot.info/">Gnuplot</a> é uma ferramenta muito usada no meio acadêmico para plotar gráficos de funções matemáticas em 2D e 3D, sendo que a saída pode ser apresentada diretamente na tela ou exportada para arquivos em diversos formatos, como <em>PNG</em>, <em>JPEG</em>, <em>SVG</em> e <em>EPS</em>.</p>
+
+<p>O Gnuplot não é disponibilizado por padrão nos repositórios oficiais do Fedora, desta forma, é necessário <a href="https://sourceforge.net/projects/gnuplot/files/gnuplot/">fazer o download do software manualmente</a>.</p>
+
+<p>Depois de fazer o download devemos abrir o terminal, entrar no diretório onde está o arquivo e descompactá-lo. Supondo que o nome do arquivo é <code class="language-plaintext highlighter-rouge">gnuplot-5.0.3.tar.gz</code> e está em <code class="language-plaintext highlighter-rouge">/home/user/Downloads</code>, entre com os comandos abaixo no terminal.</p>
+
+<p>Entrar no diretório do download:</p>
+
+<pre><code class="shell terminal">
+$ cd Downloads
+</code></pre>
+
+<p>Descompactar o arquivo de instalação:</p>
+
+<pre><code class="shell terminal">
+$ tar -vzxf gnuplot-5.0.3.tar.gz
+</code></pre>
+
+<p>Entrar no diretório descompactado:</p>
+
+<pre><code class="shell terminal">
+$ cd gnuplot-5.0.3
+</code></pre>
+
+<p>Agora vamos para a instalação propriamente dita. Entre com os comandos abaixo:</p>
+
+<pre><code class="shell terminal">
+$ ./configure
+</code></pre>
+
+<pre><code class="shell terminal">
+$ sudo make install
+</code></pre>
+
+<p>Se não houver problemas durante esse processo, a instalação será concluída com sucesso. Para verificar se o software está funcionando, vamos fazer uma espécie de <em>Hello Word</em>, ou seja, vamos plotar um gráfico simples.</p>
+
+<p>Para entrar no Gnuplot vá ao terminal e faça:</p>
+
+<pre><code class="shell terminal">
+$ gnuplot
+</code></pre>
+
+<p>Com o Gnuplot aberto no terminal, vamos plotar o gráfico de <em>sen(x)</em>:</p>
+
+<pre><code class="shell terminal">
+gnuplot&gt; plot sin(x)
+</code></pre>
+
+<p>Com isso, uma janela deverá ser aberta com o gráfico da função como na figura abaixo.</p>
+
+<div style="text-align: center"><a href="/images/como-instalar-gnuplot-fedora/gnuplot-sin-x.png" target="_blank"><figure><img src="/images/como-instalar-gnuplot-fedora/gnuplot-sin-x.png" style="max-width: 100%" alt="Imagem plotada através do Gnuplot" title="Imagem plotada através do Gnuplot" /><figcaption class="text-center">Imagem plotada através do Gnuplot.</figcaption></figure></a>
+</div>
+
+<p>Eu usei o Gnuplot para gerar os gráficos do <a href="http://www.slideshare.net/RamonSantos28/tcc-avaliao-de-dependabilidade-e-anlise-de-sensibilidade-de-uma-plataforma-como-servio-paas">meu TCC</a> e a qualidade ficou ótima. Para finalizar, outra dica é exportar os gráficos gerados para formatos vetoriais, como o <strong>EPS</strong> ou o <strong>SVG</strong>.</p>
+
+      </div>
+    </article>
+
+    <hr class="post-separator">
+  
+
+  
+    <footer>
+      <div class="pagination">
+        
+          <a class="extend prev" rel="prev" href="/">Anterior</a>
+        
+
+        
+          
+            <a class="page-number" href="/index.html">1</a>
+          
+        
+          
+            <span class="page-number current">2</span>
+          
+        
+
+        
+      </div>
+    </footer>
+  
+</main><aside class="sidebar-section">
+  
+    <div class="category-subsection">
+      <h2>Categorias</h2>
+
+      <ul>
+        
+
+        
+          <li>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+
+            <a href="/categories/ferramentas">
+              Ferramentas
+              (4)
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  
+
+  
+    <div class="tags-subsection">
+      <h2>Tags</h2>
+
+      <ul>
+        
+
+        
+          <li>
+            <a href="/tags/fedora">
+              <i class="fa fa-tag" aria-hidden="true"></i>
+              Fedora
+            </a>
+          </li>
+        
+          <li>
+            <a href="/tags/ferramentas-acadêmicas">
+              <i class="fa fa-tag" aria-hidden="true"></i>
+              Ferramentas Acadêmicas
+            </a>
+          </li>
+        
+          <li>
+            <a href="/tags/ferramentas-de-desenvolvimento">
+              <i class="fa fa-tag" aria-hidden="true"></i>
+              Ferramentas de Desenvolvimento
+            </a>
+          </li>
+        
+          <li>
+            <a href="/tags/java">
+              <i class="fa fa-tag" aria-hidden="true"></i>
+              Java
+            </a>
+          </li>
+        
+          <li>
+            <a href="/tags/linux">
+              <i class="fa fa-tag" aria-hidden="true"></i>
+              Linux
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  
+</aside>
+
+    </section><aside id="mobileMenu" class="mobile-menu mobile-menu-hidden">
+  <a id="menuClose" class="menu-close-btn" href="javascript:void(0);">
+    <i class="fa fa-close" aria-hidden="true"></i>
+  </a>
+
+  <nav class="page-links">
+    <ul>
+      
+        <li>
+          <a href="/">Home</a>
+        </li>
+      
+        <li>
+          <a href="/blog/">Blog</a>
+        </li>
+      
+        <li>
+          <a href="/about/">Sobre</a>
+        </li>
+      
+    </ul>
+  </nav>
+</aside>
+<footer class="footer">
+  <div>
+    &copy; 2025 Ramon Santos.
+    <br>
+    Desenvolvido com <i class="fa fa-heart"></i> + <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> + <i class="fa fa-coffee"></i>.
+  </div>
+</footer>
+<script src="/assets/scripts.js"></script><script>
+  if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-82053881-1', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
+</body>
+</html>
