@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt_BR"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://ramonsantos.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ramonsantos.github.io/" rel="alternate" type="text/html" hreflang="pt_BR" /><updated>2025-06-07T19:58:38+00:00</updated><id>https://ramonsantos.github.io/feed.xml</id><title type="html">Ramon Santos</title><subtitle>Blog sobre desenvolvimento</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;ramonsantos_dev&quot;, &quot;picture&quot;=&gt;&quot;/ramon-santos.png&quot;}</name></author><entry><title type="html">Como instalar o Eclipse no Linux</title><link href="https://ramonsantos.github.io/blog/como-instalar-eclipse-linux/" rel="alternate" type="text/html" title="Como instalar o Eclipse no Linux" /><published>2016-09-07T00:54:37+00:00</published><updated>2016-09-07T00:54:37+00:00</updated><id>https://ramonsantos.github.io/blog/como-instalar-eclipse-linux</id><content type="html" xml:base="https://ramonsantos.github.io/blog/como-instalar-eclipse-linux/"><![CDATA[<p>O <strong><a href="https://eclipse.org/">Eclipse</a></strong> é uma excelente ferramenta, <a href="https://github.com/eclipse">open source</a>, para desenvolvimento de aplicações em <strong>Java</strong> e em outras linguagens. Neste artigo, será abordado a instalação desta ferramenta no sistema <strong>Linux</strong>. O único pré-requisito para ter o Eclipse em sua máquina, é ter o <a href="https://ramonsantos.github.io/blog/como-instalar-java-fedora/">JDK instalado</a>.</p>
+
+<p>A primeira coisa a ser feita é o <a href="https://eclipse.org/downloads/">download do Eclipse</a>, sendo que a versão mais recente é o <a href="https://projects.eclipse.org/releases/neon">Eclipse Neon</a>.</p>
+
+<p>Dado que o dowload foi feito no diretório <code class="language-plaintext highlighter-rouge">/home/user/Downloads</code>, execute no terminal:</p>
+
+<pre><code class="shell terminal">
+$ cd Downloads
+$ tar -vzxf eclipse*
+$ sudo mv eclipse /opt
+</code></pre>
+
+<p>Feito isso, agora vamos criar uma entrada de desktop (atalho) para o Eclipse. No terminal faça:</p>
+
+<pre><code class="shell terminal">
+$ cd /usr/share/applications
+$ sudo gedit eclipse.desktop
+</code></pre>
+
+<p>Uma janela do gedit será aberta, entre com o conteúdo a seguir, salve o arquivo e feche o editor.</p>
+
+<pre><code class="plaintext">
+[Desktop Entry]
+Name=Eclipse
+Type=Application
+Exec=/opt/eclipse/eclipse
+Terminal=false
+Icon=/opt/eclipse/icon.xpm
+Comment=Integrated Development Environment
+NoDisplay=false
+Categories=Development;IDE
+Name[en]=Eclipse
+</code></pre>
+
+<p>Por fim, vamos criar um link simbólico.</p>
+
+<pre><code class="shell terminal">
+$ cd /usr/local/bin
+$ sudo ln -s /opt/eclipse/eclipse
+</code></pre>
+
+<p>Se tudo ocorreu bem, basta acessar o Eclipse através do ícone no lançador de seu ambiente gráfico, no meu caso é o gnome, ou pelo terminal:</p>
+
+<pre><code class="shell terminal">
+$ eclipse
+</code></pre>]]></content><author><name>{&quot;twitter&quot;=&gt;&quot;ramonsantos_dev&quot;, &quot;picture&quot;=&gt;&quot;/ramon-santos.png&quot;}</name></author><category term="Ferramentas" /><category term="Ferramentas de Desenvolvimento" /><category term="Java" /><category term="Linux" /><summary type="html"><![CDATA[O Eclipse é uma excelente ferramenta, open source, para desenvolvimento de aplicações em Java e em outras linguagens. Neste artigo, será abordado a instalação desta ferramenta no sistema Linux. O único pré-requisito para ter o Eclipse em sua máquina, é ter o JDK instalado.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ramonsantos.github.io/images/como-instalar-eclipse-linux/eclipse.png" /><media:content medium="image" url="https://ramonsantos.github.io/images/como-instalar-eclipse-linux/eclipse.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Como instalar o Java no Fedora</title><link href="https://ramonsantos.github.io/blog/como-instalar-java-fedora/" rel="alternate" type="text/html" title="Como instalar o Java no Fedora" /><published>2016-09-05T22:10:58+00:00</published><updated>2016-09-05T22:10:58+00:00</updated><id>https://ramonsantos.github.io/blog/como-instalar-java-fedora</id><content type="html" xml:base="https://ramonsantos.github.io/blog/como-instalar-java-fedora/"><![CDATA[<p>O objetivo deste post é mostrar <strong>como instalar o JDK no Fedora</strong>, no entanto, este artigo pode servir para outras distribuições da família <strong>Red Hat</strong>, como é o caso de <strong><a href="https://www.centos.org/">CentOS</a></strong>.</p>
+
+<p>Primeiramente é preciso fazer o <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">download do pacote RPM do JDK através do site oficial</a>. A versão mais atual do JDK neste momento é a <code class="language-plaintext highlighter-rouge">1.8.101</code>. Desta forma, escolha o pacote referente à arquitetura de sua máquina (32 bits ou 64 bits).</p>
+
+<p>Supondo que o download do pacote de instalação foi feito no o diretório <code class="language-plaintext highlighter-rouge">/home/user/Downloads</code> e o arquivo chama-se <code class="language-plaintext highlighter-rouge">jdk-8u101-linux-x64.rpm</code>, entre com os seguintes comandos no terminal:</p>
+
+<pre><code class="shell terminal">
+$ cd Downloads
+$ sudo rpm -Uvh jdk-8u101-linux-x64.rpm
+$ sudo alternatives --install /usr/bin/java java /usr/java/latest/jre/bin/java 200000
+</code></pre>
+
+<p>Após a instalação é importante definir qual a versão padrão do <strong>JDK</strong> no sistema operacional, dado que o <strong>Fedora</strong> já vem com o <strong><a href="http://openjdk.java.net/">OpenJDK</a></strong> instalado. Para isso, entre com o comando abaixo no terminal:</p>
+
+<pre><code class="shell terminal">
+$ sudo alternatives --config java
+
+  Há 3 programas que oferecem "java".
+
+  Seleção    Comando
+  -----------------------------------------------
+  *  1           java-1.8.0-openjdk.x86_64 (/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.101-1.b14.fc24.x86_64/jre/bin/java)
+  +  2           /usr/java/jdk1.8.0_101/jre/bin/java
+     3           /usr/java/latest/jre/bin/java
+
+  Indique para manter a seleção atual[+] ou digite o número da seleção:
+</code></pre>
+
+<p>Neste caso, escolha a opção 2 (<code class="language-plaintext highlighter-rouge">/usr/java/jdk1.8.0_101/jre/bin/java</code>).</p>
+
+<p>Para conferir se o JDK está instalado, digite o comando abaixo no terminal e verifique se a saída é parecida com esta:</p>
+
+<pre><code class="shell terminal">
+$ java -version
+  java version "1.8.0_101"
+  Java(TM) SE Runtime Environment (build 1.8.0_101-b13)
+  Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)
+</code></pre>
+
+<p>Agora vamos fazer um <em>Hello Word</em> para testar se está tudo funcionando. Abra um editor de texto e entre com o código fonte abaixo:</p>
+
+<pre><code class="java">
+public class Main {
+    public static void main(String[] args) {
+    	System.out.println("Hello, World!");
+    }
+}
+</code></pre>
+
+<p>Salve o arquivo com o nome <code class="language-plaintext highlighter-rouge">Main.java</code> e entre no diretório onde este se encontra para compilá-lo:</p>
+
+<pre><code class="shell terminal">
+$ javac Main.java
+</code></pre>
+
+<p>O compilador do <strong>Java</strong>, o <strong>javac</strong>, gerará um arquivo chamado <code class="language-plaintext highlighter-rouge">Main.class</code>, para rodá-lo basta entrar com:</p>
+
+<pre><code class="shell terminal">
+$ java Main
+  Hello, World!
+</code></pre>
+
+<p>Após a instalação do Java, talvez você também queira instalar o <a href="/blog/como-instalar-eclipse-linux/">Eclipse</a> ;)</p>]]></content><author><name>{&quot;twitter&quot;=&gt;&quot;ramonsantos_dev&quot;, &quot;picture&quot;=&gt;&quot;/ramon-santos.png&quot;}</name></author><category term="Ferramentas" /><category term="Fedora" /><category term="Java" /><category term="Linux" /><summary type="html"><![CDATA[O objetivo deste post é mostrar como instalar o JDK no Fedora, no entanto, este artigo pode servir para outras distribuições da família Red Hat, como é o caso de CentOS.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ramonsantos.github.io/images/como-instalar-java-fedora/java.png" /><media:content medium="image" url="https://ramonsantos.github.io/images/como-instalar-java-fedora/java.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Atom: instalação e primeiros passos</title><link href="https://ramonsantos.github.io/blog/atom-instalacao-primeiros-passos/" rel="alternate" type="text/html" title="Atom: instalação e primeiros passos" /><published>2016-08-13T17:27:19+00:00</published><updated>2016-08-13T17:27:19+00:00</updated><id>https://ramonsantos.github.io/blog/atom-instalacao-primeiros-passos</id><content type="html" xml:base="https://ramonsantos.github.io/blog/atom-instalacao-primeiros-passos/"><![CDATA[<p>O <strong>Atom</strong> é um editor de texto open source muito usado por desenvolvedores. Foi inicialmente desenvolvido pelo <strong>GitHub</strong> e seu repositório oficial <a href="https://github.com/atom/atom">está disponível no próprio Github</a>.</p>
+
+<h2 id="instalação">Instalação</h2>
+
+<p>Uma das características deste editor é que ele é multiplataforma. Para <strong>Linux</strong>, o Atom é <a href="https://atom.io/" title="Site oficial do Atom" target="_blank">disponibilizado</a> em pacotes <code class="language-plaintext highlighter-rouge">.deb</code> e <code class="language-plaintext highlighter-rouge">.rpm</code>, além da possibilidade de instalação a partir dos fontes e contando com um excelente <a href="https://github.com/atom/atom/blob/master/docs/build-instructions/linux.md" target="_blank">tutorial</a>.</p>
+
+<p>Com o pacote de sua distribuição baixado, basta entrar no diretório onde o mesmo se encontra e executar um dos comando abaixo de acordo com sua distro.</p>
+
+<h4 id="família-debian-debian-ubuntu-linux-mint-e-etc">Família Debian (Debian, Ubuntu, Linux Mint e etc):</h4>
+
+<pre><code class="shell terminal">
+$ sudo dpkg -i atom-amd64.deb
+</code></pre>
+
+<h4 id="família-red-hat-fedora-centos-opensuse-e-etc">Família Red Hat (Fedora, CentOS, openSUSE e etc):</h4>
+
+<pre><code class="shell terminal">
+$ sudo rpm -Uvh atom.x86_64.rpm
+</code></pre>
+
+<h2 id="recursos-nativos">Recursos nativos</h2>
+
+<p>Por padrão, o Atom já vem como vários recursos úteis, entre eles temos:</p>
+
+<ul>
+  <li>Integração com o Github;</li>
+  <li>Gerenciador de pacotes;</li>
+  <li>Syntax highlight;</li>
+  <li>Live preview para arquivos Markdown;</li>
+  <li>Divisão de Painéis (Split);</li>
+  <li>Tree view para diretórios e arquivos.</li>
+</ul>
+
+<div style="text-align: center"><a href="/images/atom-instalacao-primeiros-passos/atom-live-preview-md.png" target="_blank"><figure><img src="/images/atom-instalacao-primeiros-passos/atom-live-preview-md.png" style="max-width: 100%" alt="Live Preview para Markdown" title="Live Preview para Markdown" /><figcaption class="text-center">Live Preview para Markdown.</figcaption></figure></a></div>
+
+<div style="text-align: center"><a href="/images/atom-instalacao-primeiros-passos/atom-split.png" target="_blank"><figure><img src="/images/atom-instalacao-primeiros-passos/atom-split.png" style="max-width: 100%" alt="Divisões de Painéis (Split)" title="Divisões de Painéis (Split)" /><figcaption class="text-center">Divisões de Painéis (Split).</figcaption></figure></a></div>
+
+<h2 id="personalizando-o-atom">Personalizando o Atom</h2>
+
+<p>Agora vamos para a melhor parte, os pacotes. Como mencionado acima, o gerenciador do pacotes já vem ativado por padrão, para acessá-lo entre no menu <code class="language-plaintext highlighter-rouge">Edit</code> &gt; <code class="language-plaintext highlighter-rouge">Preferences</code>, vai aparecer a aba <code class="language-plaintext highlighter-rouge">Settings</code>.</p>
+
+<p>Na aba <code class="language-plaintext highlighter-rouge">Settings</code> podemos definir teclas de atalhos (<em>Keybindings</em>), configuração gerais (<em>Settings</em>), instalar (<em>install</em>) e atualizar (<em>updates</em>) pacotes e temas, gerenciar pacotes instalados (<em>Packages</em>) e escolher o visual da aplicação (<em>Themes</em>).</p>
+
+<p>Para ilustrar o potencial de personalização do atom, vamos deixá-lo parecido com o <strong>Sublime Text</strong>. Duas características são icônicas no Sublime Text: o tema <strong>monokai</strong> e o <strong>minimap</strong>”.</p>
+
+<h3 id="instalando-um-tema">Instalando um tema</h3>
+
+<p>Para instalar o tema vá em <code class="language-plaintext highlighter-rouge">Install</code>, digite <code class="language-plaintext highlighter-rouge">monokai</code> e click em <code class="language-plaintext highlighter-rouge">Themes</code>. Entre as opções escolha <code class="language-plaintext highlighter-rouge">monokai</code> do usuário <code class="language-plaintext highlighter-rouge">kevinsawicki</code> e click em <code class="language-plaintext highlighter-rouge">Install</code>.</p>
+
+<p>Depois de instalação, vá em <code class="language-plaintext highlighter-rouge">Themes</code> para configurar o tema. Em <code class="language-plaintext highlighter-rouge">UI Theme</code> escolha <code class="language-plaintext highlighter-rouge">Atom Light</code> e em <code class="language-plaintext highlighter-rouge">Syntax Theme</code> escolha <code class="language-plaintext highlighter-rouge">Monokai</code>.</p>
+
+<h3 id="instalando-um-pacote">Instalando um pacote</h3>
+
+<p>Para instalar um pacote o procedimento é similar, vá em <code class="language-plaintext highlighter-rouge">Install</code>, digite <code class="language-plaintext highlighter-rouge">minimap</code> e precione <code class="language-plaintext highlighter-rouge">enter</code> ou click em <code class="language-plaintext highlighter-rouge">Packages</code>. Escolha o pacote <code class="language-plaintext highlighter-rouge">minimap</code> do usuário <code class="language-plaintext highlighter-rouge">atom-minimap</code> e click em <code class="language-plaintext highlighter-rouge">Install</code>.</p>
+
+<p>Geralmente os pacotes são ativados logo após serem instalados, para conferir vá em <code class="language-plaintext highlighter-rouge">Packages</code> e veja se o pacote está ativo, caso não esteja click em <code class="language-plaintext highlighter-rouge">Enable</code>.</p>
+
+<div style="text-align: center">
+  <a href="/images/atom-instalacao-primeiros-passos/atom-monokai-theme.png" target="_blank">
+    <figure>
+      <img src="/images/atom-instalacao-primeiros-passos/atom-monokai-theme.png" style="max-width: 100%" alt="Visual do Atom depois da personalização" title="Visual do Atom depois da personalização" />
+      <figcaption class="text-center">Visual do Atom depois da personalização.</figcaption>
+    </figure>
+  </a>
+</div>
+
+<p>A aparência do Atom ficará como na figura acima.</p>]]></content><author><name>{&quot;twitter&quot;=&gt;&quot;ramonsantos_dev&quot;, &quot;picture&quot;=&gt;&quot;/ramon-santos.png&quot;}</name></author><category term="Ferramentas" /><category term="Ferramentas de Desenvolvimento" /><category term="Linux" /><summary type="html"><![CDATA[Instalação e introdução ao editor Atom.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ramonsantos.github.io/images/atom-instalacao-primeiros-passos/atom-icon.png" /><media:content medium="image" url="https://ramonsantos.github.io/images/atom-instalacao-primeiros-passos/atom-icon.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Como instalar o Gnuplot no Fedora</title><link href="https://ramonsantos.github.io/blog/como-instalar-gnuplot-fedora/" rel="alternate" type="text/html" title="Como instalar o Gnuplot no Fedora" /><published>2016-08-06T17:42:50+00:00</published><updated>2016-08-06T17:42:50+00:00</updated><id>https://ramonsantos.github.io/blog/como-instalar-gnuplot-fedora</id><content type="html" xml:base="https://ramonsantos.github.io/blog/como-instalar-gnuplot-fedora/"><![CDATA[<p>Vamos ver como instalar o <strong>Gnuplot</strong> no <strong>Fedora</strong>. Para quem não conhece, <a href="http://www.gnuplot.info/">Gnuplot</a> é uma ferramenta muito usada no meio acadêmico para plotar gráficos de funções matemáticas em 2D e 3D, sendo que a saída pode ser apresentada diretamente na tela ou exportada para arquivos em diversos formatos, como <em>PNG</em>, <em>JPEG</em>, <em>SVG</em> e <em>EPS</em>.</p>
+
+<p>O Gnuplot não é disponibilizado por padrão nos repositórios oficiais do Fedora, desta forma, é necessário <a href="https://sourceforge.net/projects/gnuplot/files/gnuplot/">fazer o download do software manualmente</a>.</p>
+
+<p>Depois de fazer o download devemos abrir o terminal, entrar no diretório onde está o arquivo e descompactá-lo. Supondo que o nome do arquivo é <code class="language-plaintext highlighter-rouge">gnuplot-5.0.3.tar.gz</code> e está em <code class="language-plaintext highlighter-rouge">/home/user/Downloads</code>, entre com os comandos abaixo no terminal.</p>
+
+<p>Entrar no diretório do download:</p>
+
+<pre><code class="shell terminal">
+$ cd Downloads
+</code></pre>
+
+<p>Descompactar o arquivo de instalação:</p>
+
+<pre><code class="shell terminal">
+$ tar -vzxf gnuplot-5.0.3.tar.gz
+</code></pre>
+
+<p>Entrar no diretório descompactado:</p>
+
+<pre><code class="shell terminal">
+$ cd gnuplot-5.0.3
+</code></pre>
+
+<p>Agora vamos para a instalação propriamente dita. Entre com os comandos abaixo:</p>
+
+<pre><code class="shell terminal">
+$ ./configure
+</code></pre>
+
+<pre><code class="shell terminal">
+$ sudo make install
+</code></pre>
+
+<p>Se não houver problemas durante esse processo, a instalação será concluída com sucesso. Para verificar se o software está funcionando, vamos fazer uma espécie de <em>Hello Word</em>, ou seja, vamos plotar um gráfico simples.</p>
+
+<p>Para entrar no Gnuplot vá ao terminal e faça:</p>
+
+<pre><code class="shell terminal">
+$ gnuplot
+</code></pre>
+
+<p>Com o Gnuplot aberto no terminal, vamos plotar o gráfico de <em>sen(x)</em>:</p>
+
+<pre><code class="shell terminal">
+gnuplot&gt; plot sin(x)
+</code></pre>
+
+<p>Com isso, uma janela deverá ser aberta com o gráfico da função como na figura abaixo.</p>
+
+<div style="text-align: center"><a href="/images/como-instalar-gnuplot-fedora/gnuplot-sin-x.png" target="_blank"><figure><img src="/images/como-instalar-gnuplot-fedora/gnuplot-sin-x.png" style="max-width: 100%" alt="Imagem plotada através do Gnuplot" title="Imagem plotada através do Gnuplot" /><figcaption class="text-center">Imagem plotada através do Gnuplot.</figcaption></figure></a>
+</div>
+
+<p>Eu usei o Gnuplot para gerar os gráficos do <a href="http://www.slideshare.net/RamonSantos28/tcc-avaliao-de-dependabilidade-e-anlise-de-sensibilidade-de-uma-plataforma-como-servio-paas">meu TCC</a> e a qualidade ficou ótima. Para finalizar, outra dica é exportar os gráficos gerados para formatos vetoriais, como o <strong>EPS</strong> ou o <strong>SVG</strong>.</p>]]></content><author><name>{&quot;twitter&quot;=&gt;&quot;ramonsantos_dev&quot;, &quot;picture&quot;=&gt;&quot;/ramon-santos.png&quot;}</name></author><category term="Ferramentas" /><category term="Fedora" /><category term="Ferramentas Acadêmicas" /><category term="Linux" /><summary type="html"><![CDATA[Instalação do Gnuplot no fedora.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ramonsantos.github.io/images/como-instalar-gnuplot-fedora/gnuplot-sin-x.png" /><media:content medium="image" url="https://ramonsantos.github.io/images/como-instalar-gnuplot-fedora/gnuplot-sin-x.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

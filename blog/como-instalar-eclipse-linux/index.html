@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head><title>
+  
+    Como instalar o Eclipse no Linux | Ramon Santos
+  
+</title>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="/assets/main.css">
+<link rel="icon" href="/favicon.svg">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Como instalar o Eclipse no Linux" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="description" content="O Eclipse é uma excelente ferramenta, open source, para desenvolvimento de aplicações em Java e em outras linguagens. Neste artigo, será abordado a instalação desta ferramenta no sistema Linux. O único pré-requisito para ter o Eclipse em sua máquina, é ter o JDK instalado." />
+<meta property="og:description" content="O Eclipse é uma excelente ferramenta, open source, para desenvolvimento de aplicações em Java e em outras linguagens. Neste artigo, será abordado a instalação desta ferramenta no sistema Linux. O único pré-requisito para ter o Eclipse em sua máquina, é ter o JDK instalado." />
+<link rel="canonical" href="https://ramonsantos.github.io/blog/como-instalar-eclipse-linux/" />
+<meta property="og:url" content="https://ramonsantos.github.io/blog/como-instalar-eclipse-linux/" />
+<meta property="og:site_name" content="Ramon Santos" />
+<meta property="og:image" content="https://ramonsantos.github.io/images/como-instalar-eclipse-linux/eclipse.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-09-07T00:54:37+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:image" content="https://ramonsantos.github.io/images/como-instalar-eclipse-linux/eclipse.png" />
+<meta property="twitter:title" content="Como instalar o Eclipse no Linux" />
+<meta name="twitter:site" content="@ramonsantos_dev" />
+<meta name="twitter:creator" content="@ramonsantos_dev" />
+<meta property="fb:admins" content="CjHweHcsUQm" />
+<meta property="fb:app_id" content="122740845026539" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2016-09-07T00:54:37+00:00","datePublished":"2016-09-07T00:54:37+00:00","description":"O Eclipse é uma excelente ferramenta, open source, para desenvolvimento de aplicações em Java e em outras linguagens. Neste artigo, será abordado a instalação desta ferramenta no sistema Linux. O único pré-requisito para ter o Eclipse em sua máquina, é ter o JDK instalado.","headline":"Como instalar o Eclipse no Linux","image":"https://ramonsantos.github.io/images/como-instalar-eclipse-linux/eclipse.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://ramonsantos.github.io/blog/como-instalar-eclipse-linux/"},"url":"https://ramonsantos.github.io/blog/como-instalar-eclipse-linux/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+  <body><header class="header">
+  <div class="header-content content-width">
+    <h1>
+      <a class="site-title" href="/" title="Blog sobre desenvolvimento">
+        Ramon Santos
+      </a>
+    </h1>
+
+    <a id="menuBar" class="mobile-menu-bar" href="javascript:void(0);">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </a>
+
+    <nav class="header-menu">
+      <ul>
+        
+          
+            <li>
+          
+
+            <a href="/">Home</a>
+          </li>
+        
+          
+            <li>
+          
+
+            <a href="/blog/">Blog</a>
+          </li>
+        
+          
+            <li>
+          
+
+            <a href="/about/">Sobre</a>
+          </li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+<section class="content-section content-width">
+      <main class="main-section"><article><header class="header-post">
+  <h1>
+    <a href="/blog/como-instalar-eclipse-linux/">Como instalar o Eclipse no Linux</a>
+  </h1>
+
+  <ul>
+    <li>
+      <i></i>
+      <i class="fa fa-calendar"></i>
+      <time datetime="2016-09-07T00:54:37+00:00">07/09/2016</time>
+    </li>
+
+    <li>
+      <i></i>
+      <i class="fa fa-archive"></i>
+      
+      <a href="/categories/ferramentas/" title="Ferramentas">Ferramentas</a>
+    </li>
+
+    
+      <li>
+        <i></i>
+        <i class="fa fa-tags"></i>
+
+        
+        
+
+        
+
+        <a href="/tags/ferramentas-de-desenvolvimento/" title="Ferramentas de Desenvolvimento">Ferramentas de Desenvolvimento</a>, <a href="/tags/java/" title="Java">Java</a>, <a href="/tags/linux/" title="Linux">Linux</a>
+      </li>
+    
+  </ul>
+</header>
+<div class="content-post">
+    <p>O <strong><a href="https://eclipse.org/" target="_blank">Eclipse</a></strong> é uma excelente ferramenta, <a href="https://github.com/eclipse" target="_blank">open source</a>, para desenvolvimento de aplicações em <strong>Java</strong> e em outras linguagens. Neste artigo, será abordado a instalação desta ferramenta no sistema <strong>Linux</strong>. O único pré-requisito para ter o Eclipse em sua máquina, é ter o <a href="https://ramonsantos.github.io/blog/como-instalar-java-fedora/">JDK instalado</a>.</p>
+
+<p>A primeira coisa a ser feita é o <a href="https://eclipse.org/downloads/" target="_blank">download do Eclipse</a>, sendo que a versão mais recente é o <a href="https://projects.eclipse.org/releases/neon" target="_blank">Eclipse Neon</a>.</p>
+
+<p>Dado que o dowload foi feito no diretório <code class="language-plaintext highlighter-rouge">/home/user/Downloads</code>, execute no terminal:</p>
+
+<pre><code class="shell terminal">
+$ cd Downloads
+$ tar -vzxf eclipse*
+$ sudo mv eclipse /opt
+</code></pre>
+
+<p>Feito isso, agora vamos criar uma entrada de desktop (atalho) para o Eclipse. No terminal faça:</p>
+
+<pre><code class="shell terminal">
+$ cd /usr/share/applications
+$ sudo gedit eclipse.desktop
+</code></pre>
+
+<p>Uma janela do gedit será aberta, entre com o conteúdo a seguir, salve o arquivo e feche o editor.</p>
+
+<pre><code class="plaintext">
+[Desktop Entry]
+Name=Eclipse
+Type=Application
+Exec=/opt/eclipse/eclipse
+Terminal=false
+Icon=/opt/eclipse/icon.xpm
+Comment=Integrated Development Environment
+NoDisplay=false
+Categories=Development;IDE
+Name[en]=Eclipse
+</code></pre>
+
+<p>Por fim, vamos criar um link simbólico.</p>
+
+<pre><code class="shell terminal">
+$ cd /usr/local/bin
+$ sudo ln -s /opt/eclipse/eclipse
+</code></pre>
+
+<p>Se tudo ocorreu bem, basta acessar o Eclipse através do ícone no lançador de seu ambiente gráfico, no meu caso é o gnome, ou pelo terminal:</p>
+
+<pre><code class="shell terminal">
+$ eclipse
+</code></pre>
+
+  </div>
+<br>
+
+  <footer id="comments">
+    <div id="disqus_thread"></div>
+
+    <script>
+      var disqus_config = function () {
+        this.page.url = 'https://ramonsantos.github.io/blog/como-instalar-eclipse-linux/';
+        this.page.identifier = 'https://ramonsantos.github.io/blog/como-instalar-eclipse-linux/';
+      };
+
+      (function() {
+        var d = document, s = d.createElement('script');
+
+        s.src = 'https://ramon-santos.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+
+    <script id="dsq-count-scr" src="//ramon-santos.disqus.com/count.js" async></script>
+
+    <noscript>Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript" rel="nofollow" target="_blank">comments powered by Disqus.</a>
+    </noscript>
+  </footer></article>
+</main><aside class="sidebar-section">
+  
+    <div class="category-subsection">
+      <h2>Categorias</h2>
+
+      <ul>
+        
+
+        
+          <li>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+
+            <a href="/categories/ferramentas">
+              Ferramentas
+              (4)
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  
+
+  
+    <div class="tags-subsection">
+      <h2>Tags</h2>
+
+      <ul>
+        
+
+        
+          <li>
+            <a href="/tags/fedora">
+              <i class="fa fa-tag" aria-hidden="true"></i>
+              Fedora
+            </a>
+          </li>
+        
+          <li>
+            <a href="/tags/ferramentas-acad%C3%AAmicas">
+              <i class="fa fa-tag" aria-hidden="true"></i>
+              Ferramentas Acadêmicas
+            </a>
+          </li>
+        
+          <li>
+            <a href="/tags/ferramentas-de-desenvolvimento">
+              <i class="fa fa-tag" aria-hidden="true"></i>
+              Ferramentas de Desenvolvimento
+            </a>
+          </li>
+        
+          <li>
+            <a href="/tags/java">
+              <i class="fa fa-tag" aria-hidden="true"></i>
+              Java
+            </a>
+          </li>
+        
+          <li>
+            <a href="/tags/linux">
+              <i class="fa fa-tag" aria-hidden="true"></i>
+              Linux
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  
+</aside>
+
+    </section><aside id="mobileMenu" class="mobile-menu mobile-menu-hidden">
+  <a id="menuClose" class="menu-close-btn" href="javascript:void(0);">
+    <i class="fa fa-close" aria-hidden="true"></i>
+  </a>
+
+  <nav class="page-links">
+    <ul>
+      
+        <li>
+          <a href="/">Home</a>
+        </li>
+      
+        <li>
+          <a href="/blog/">Blog</a>
+        </li>
+      
+        <li>
+          <a href="/about/">Sobre</a>
+        </li>
+      
+    </ul>
+  </nav>
+</aside>
+<footer class="footer">
+  <div>
+    © 2025 Ramon Santos.
+    <br>
+    Desenvolvido com <i class="fa fa-heart"></i> + <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> + <i class="fa fa-coffee"></i>.
+  </div>
+</footer>
+<script src="/assets/scripts.js"></script><script>
+  if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-82053881-1', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
+</body>
+</html>
